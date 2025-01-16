@@ -1,8 +1,7 @@
 // next.config.mjs
-import { defineConfig } from 'next';
 
-export default defineConfig({
+export default{
   reactStrictMode: true,
   // Özel yapılandırmalar ekleyebilirsiniz
   distDir: 'build', // Örneğin, build dizinini özelleştirebilirsiniz
-});
+}
