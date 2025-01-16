@@ -318,7 +318,7 @@ a {
 }
 
 .skillCard {
-  background: var(--light-color);
+  
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -329,14 +329,14 @@ a {
   padding: 0;
   margin: 1rem 0 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
 }
 
 .skillCard li {
   position: relative;
   padding: 0.5rem 1rem;
-  background: var(--dark-color);
+  background: #956afa;
   border-radius: 8px;
   transition: transform 0.2s, background 0.2s;
   color: var(--foreground);
@@ -344,7 +344,7 @@ a {
 
 .skillCard li:hover {
   transform: scale(1.05);
-  background: var(--primary-color);
+  background: #9e75ff;
 }
 
 .skillCard li::after {
@@ -382,7 +382,12 @@ a {
 }
 
 .skillTitle {
-  font-size: 1.25rem;
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 

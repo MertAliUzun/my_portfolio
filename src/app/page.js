@@ -1,7 +1,8 @@
 'use client'
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
+import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase } from 'react-icons/si';
 
 export default function Home() {
   const [hovering, setHovering] = useState(false);
@@ -154,63 +155,64 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <section className="skills">
-          <h2 className="sectionTitle spaceFont">Yeteneklerim</h2>
+          <h2 className="sectionTitle spaceFont">Skills</h2>
           <div className="skillGrid">
             <div className="skillCard">
               <h4 className="skillTitle">Frontend</h4>
               <ul>
-                <li data-description="Kullanıcı arayüzü geliştirme">
-                  <i className="fab fa-react"></i> React
+                <li data-description="Developing user interfaces with HTML">
+                  <FaHtml5 /> HTML
                 </li>
-                <li data-description="Sunucu tarafı geliştirme">
-                  <i className="fas fa-code"></i> Next.js
+                <li data-description="Designing styles and layouts with CSS">
+                  <FaCss3Alt /> CSS
                 </li>
-                <li data-description="Statik tip kontrolü">
-                  <i className="fas fa-file-code"></i> TypeScript
+                <li data-description="Creating interactive web content with JavaScript">
+                  <FaJs /> JavaScript
                 </li>
-                <li data-description="CSS framework">
-                  <i className="fab fa-css3-alt"></i> Tailwind CSS
+                <li data-description="Using C# for application and game development">
+                  <SiSharp /> C#
+                </li>
+                <li data-description="Programming with Dart for Flutter applications">
+                  <SiDart /> Dart
                 </li>
               </ul>
             </div>
             <div className="skillCard">
               <h4 className="skillTitle">Backend</h4>
               <ul>
-                <li data-description="JavaScript tabanlı sunucu">
-                  <i className="fab fa-node-js"></i> Node.js
+                <li data-description="Managing data with the NoSQL database MongoDB">
+                  <SiMongodb /> MongoDB
                 </li>
-                <li data-description="Web uygulamaları için framework">
-                  <i className="fas fa-server"></i> Express
+                <li data-description="Working with relational databases using MySQL">
+                  <SiMysql /> MySQL
                 </li>
-                <li data-description="Veritabanı yönetim sistemi">
-                  <i className="fas fa-database"></i> PostgreSQL
-                </li>
-                <li data-description="NoSQL veritabanı">
-                  <i className="fas fa-database"></i> MongoDB
+                <li data-description="Backend-as-a-Service platform for scalable apps">
+                  <SiSupabase /> Supabase
                 </li>
               </ul>
             </div>
             <div className="skillCard">
-              <h4 className="skillTitle">Araçlar</h4>
+              <h4 className="skillTitle">Frameworks</h4>
               <ul>
-                <li data-description="Versiyon kontrol sistemi">
-                  <i className="fab fa-git"></i> Git
+                <li data-description="Building cross-platform mobile applications with Flutter">
+                  <SiFlutter /> Flutter
                 </li>
-                <li data-description="Konteynerleştirme aracı">
-                  <i className="fab fa-docker"></i> Docker
+                <li data-description="Developing server-side rendered applications with Next.js">
+                  <SiNextdotjs /> Next.js
                 </li>
-                <li data-description="Bulut hizmetleri">
-                  <i className="fab fa-aws"></i> AWS
+                <li data-description="Building enterprise-level applications with .NET framework">
+                  <SiDotnet /> .NET
                 </li>
-                <li data-description="Test çerçevesi">
-                  <i className="fas fa-vial"></i> Jest
+                <li data-description="Creating 2D and 3D games using Unity engine">
+                  <SiUnity /> Unity
                 </li>
               </ul>
             </div>
           </div>
         </section>
+
+
       </main>
     </div>
   );
