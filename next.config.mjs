@@ -1,4 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
+import { defineConfig } from 'next';
 
-export default nextConfig;
+export default defineConfig({
+  reactStrictMode: true,
+  // Özel yapılandırmalar ekleyebilirsiniz
+  distDir: 'build', // Örneğin, build dizinini özelleştirebilirsiniz
+});
