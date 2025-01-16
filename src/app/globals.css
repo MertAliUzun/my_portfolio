@@ -266,19 +266,49 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .card {
-  background: var(--dark-color);
+  background: transparent;
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.2s;
-  background-color: transparent;
 }
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cardImage {
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cardInfo {
+  flex-grow: 1;
+}
+
+.viewProjectBtn {
+  padding: 0.5rem 1rem;
+  background: #956afa;
+  color: white;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-align: center;
+  font-weight: 500;
+}
+
+.viewProjectBtn:hover {
+  background: #7c4dff;
+  transform: translateY(-2px);
+}
+
 .aboutCard {
   background: var(--dark-color);
   padding: .5rem;
@@ -301,7 +331,7 @@ a {
 }
 
 .tags span {
-  background: var(--primary-color);
+  background: #956afa;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.875rem;
@@ -514,5 +544,165 @@ a {
     grid-template-columns: 1fr;
   }
   
+}
+
+.projectDetail {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.projectHero {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.projectContent {
+  margin-top: 2rem;
+}
+
+.projectFeatures {
+  margin: 2rem 0;
+}
+
+.projectFeatures ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.projectFeatures li {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background: rgba(149, 106, 250, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.projectFeatures li::before {
+  content: "•";
+  color: #956afa;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.projectBtn {
+  padding: 0.75rem 1.5rem;
+  background: #956afa;
+  color: white;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.projectBtn:hover {
+  background: #7c4dff;
+  transform: translateY(-2px);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  background: #1B2735;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.2s;
+}
+
+.modalClose:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal içindeki scrollbar için stil */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: #956afa;
+  border-radius: 4px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: #7c4dff;
+}
+
+.cardImage .lottie-container {
+  width: 150px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectHero .lottie-container {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 

@@ -3,12 +3,16 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
 import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase } from 'react-icons/si';
+import Link from 'next/link';
+import { projects } from './data/projects';
+import Lottie from "lottie-react";
 
 export default function Home() {
   const [hovering, setHovering] = useState(false);
   const [hoverProgress, setHoverProgress] = useState(0);
   const [currentImage, setCurrentImage] = useState("avatar1.jpg");
   const [hoverAllowed, setHoverAllowed] = useState(true); 
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     let interval;
@@ -124,37 +128,112 @@ export default function Home() {
        </div> 
  
         <section className="projects" style={{marginTop: 100}}>
-          <h2 className="sectionTitle spaceFont">Projelerim</h2>
+          <h2 className="sectionTitle spaceFont">Projects</h2>
           <div className="grid">
-            <div className="card">
-              <h3 className="cardTitle">E-Ticaret Platformu</h3>
-              <p>Modern bir e-ticaret deneyimi sunan full-stack uygulama</p>
-              <div className="tags">
-                <span>Next.js</span>
-                <span>React</span>
-                <span>Node.js</span>
+            {Object.entries(projects).map(([key, project]) => (
+              <div className="card" key={key}>
+                <div className="cardContent">
+                  <div className="cardImage">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={100}
+                        height={175}
+                        objectFit="cover"
+                      />
+                  </div>
+                  <div className="cardInfo">
+                    <h3 className="cardTitle">{project.title}</h3>
+                    <p>{project.description}</p>
+                    <div className="tags">
+                      {project.technologies.slice(0, 3).map((tech, index) => (
+                        <span key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => setSelectedProject(project)} 
+                    className="viewProjectBtn"
+                  >
+                    View Project
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="card">
-              <h3 className="cardTitle">Task Yönetim Uygulaması</h3>
-              <p>Ekip çalışmasını kolaylaştıran proje yönetim aracı</p>
-              <div className="tags">
-                <span>React</span>
-                <span>Firebase</span>
-                <span>Material-UI</span>
+            ))}
+          </div>
+        </section>
+
+        {/* Modal */}
+        {selectedProject && (
+          <div className="modalOverlay" onClick={() => setSelectedProject(null)}>
+            <div className="modalContent" onClick={e => e.stopPropagation()}>
+              <button 
+                className="modalClose" 
+                onClick={() => setSelectedProject(null)}
+              >
+                ×
+              </button>
+              <div className="projectHero">
+                {selectedProject.animation ? (
+                  <Lottie
+                    animationData={selectedProject.animation}
+                    style={{ width: 800, height: 400 }}
+                  />
+                ) : (
+                  <Image
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    width={800}
+                    height={400}
+                    objectFit="cover"
+                  />
+                )}
               </div>
-            </div>
-            <div className="card">
-              <h3 className="cardTitle">Blog Platformu</h3>
-              <p>SEO dostu, performanslı blog sistemi</p>
-              <div className="tags">
-                <span>Next.js</span>
-                <span>MongoDB</span>
-                <span>Tailwind</span>
+              <div className="projectContent">
+                <h1>{selectedProject.title}</h1>
+                <p className="projectDescription">{selectedProject.description}</p>
+
+                <div className="projectFeatures">
+                  <h2>Özellikler</h2>
+                  <ul>
+                    {selectedProject.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="projectTechnologies">
+                  <h2>Kullanılan Teknolojiler</h2>
+                  <div className="tags">
+                    {selectedProject.technologies.map((tech, index) => (
+                      <span key={index}>{tech}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="projectLinks">
+                  <a 
+                    href={selectedProject.demoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="projectBtn"
+                  >
+                    Live Demo
+                  </a>
+                  <a 
+                    href={selectedProject.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="projectBtn"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        )}
+
         <section className="skills">
           <h2 className="sectionTitle spaceFont">Skills</h2>
           <div className="skillGrid">
