@@ -1,6 +1,197 @@
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+}
+.title {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.spaceFont {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    979px 1807px #FFF, 
+    1286px 526px #FFF, 
+    1747px 1593px #FFF, 
+    1374px 1934px #FFF, 
+    1679px 1693px #FFF,
+    500px 1000px #FFF,
+    800px 1200px #FFF,
+    300px 300px #FFF,
+    1200px 800px #FFF,
+    1500px 400px #FFF,
+    200px 1000px #FFF,
+    400px 1500px #FFF,
+    600px 2000px #FFF,
+    800px 500px #FFF,
+    1000px 1200px #FFF,
+    1200px 300px #FFF,
+    1400px 800px #FFF,
+    1600px 600px #FFF,
+    1800px 900px #FFF,
+    2000px 1000px #FFF,
+    2200px 1100px #FFF,
+    2200px 1100px #FFF,
+    2400px 1200px #FFF,
+    2600px 1300px #FFF,
+    2800px 1400px #FFF,
+    3000px 1500px #FFF,
+    200px 500px #FFF,
+    1500px 1600px #FFF,
+    2200px 900px #FFF,
+    1900px 1800px #FFF,
+    1300px 1900px #FFF,
+    2200px 700px #FFF,
+    1300px 1200px #FFF;
+  animation: animStar 50s linear infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 979px 1807px #FFF , 1286px 526px #FFF , 1747px 1593px #FFF , 1374px 1934px #FFF , 1679px 1693px #FFF,
+    200px 400px #FFF, 600px 1500px #FFF, 1300px 1800px #FFF, 1900px 200px #FFF, 1600px 1000px #FFF;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    1743px 1280px #FFF, 
+    1340px 1329px #FFF, 
+    666px 504px #FFF, 
+    1587px 1949px #FFF, 
+    1692px 276px #FFF,
+    400px 600px #FFF,
+    900px 1100px #FFF,
+    200px 200px #FFF,
+    1300px 900px #FFF,
+    1600px 500px #FFF,
+    1200px 1300px #FFF,
+    300px 1700px #FFF,
+    1800px 1100px #FFF,
+    1500px 600px #FFF,
+    2100px 1300px #FFF,
+    800px 1200px #FFF,
+    2500px 400px #FFF,
+    900px 1000px #FFF,
+    1300px 400px #FFF,
+    1900px 1600px #FFF,
+    2200px 1100px #FFF,
+    2300px 700px #FFF;
+  animation: animStar 100s linear infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1743px 1280px #FFF , 1340px 1329px #FFF , 666px 504px #FFF , 1587px 1949px #FFF , 1692px 276px #FFF,
+    600px 900px #FFF, 1200px 1400px #FFF, 1800px 1800px #FFF, 2100px 800px #FFF;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 
+    1994px 1692px #FFF, 
+    961px 1928px #FFF, 
+    1500px 1858px #FFF, 
+    1020px 1001px #FFF, 
+    1662px 1857px #FFF,
+    600px 800px #FFF,
+    1100px 1300px #FFF,
+    300px 400px #FFF,
+    1400px 600px #FFF,
+    1700px 700px #FFF,
+    1500px 300px #FFF,
+    2200px 1500px #FFF,
+    900px 1900px #FFF,
+    2000px 600px #FFF,
+    500px 1300px #FFF,
+    2500px 900px #FFF,
+    1800px 1400px #FFF,
+    1100px 600px #FFF,
+    1500px 1200px #FFF,
+    1000px 1000px #FFF,
+    1600px 700px #FFF,
+    1300px 2000px #FFF,
+    2400px 1000px #FFF;
+  animation: animStar 150s linear infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1994px 1692px #FFF , 961px 1928px #FFF , 1500px 1858px #FFF , 1020px 1001px #FFF , 1662px 1857px #FFF,
+    200px 1300px #FFF, 1200px 1500px #FFF, 1800px 1800px #FFF, 1300px 1400px #FFF;
+}
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #121212;
+  --foreground: #ffffff;
+  --primary-color: #1db954;
+  --secondary-color: #b3b3b3;
+  --light-color: #1e1e1e;
+  --dark-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +205,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 * {
@@ -35,8 +224,290 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.page {
+  position: relative;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.description {
+  max-width: 600px;
+  margin: 1rem auto;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.projects {
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--dark-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  background-color: transparent;
+}
+.aboutCard {
+  background: var(--dark-color);
+  padding: .5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;  /* Yatayda ortalar */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tags span {
+  background: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+}
+
+.skills {
+  margin-bottom: 4rem;
+}
+
+.skillGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skillCard {
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.skillCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skillCard li {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: var(--dark-color);
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+  color: var(--foreground);
+}
+
+.skillCard li:hover {
+  transform: scale(1.05);
+  background: var(--primary-color);
+}
+
+.skillCard li::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.skillCard li:hover::after {
+  opacity: 1;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skillTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-container {
+  position: relative;
+  width: 220px; /* SVG boyutuna göre ayarlandı */
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 220px;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(-90deg); /* Çizginin başlangıç noktasını üstte olacak şekilde döndür */
+}
+
+.contact {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contactIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.contactButton {
+  background: transparent; /* Arka planı şeffaf yap */
+  border: none; /* Kenarlıkları kaldır */
+  cursor: pointer; /* İmleci göster */
+  transition: transform 0.2s; /* Hover efekti için geçiş */
+}
+
+.contactButton:hover {
+  transform: scale(1.1); /* Hover sırasında büyüt */
+}
+
+.contactIcons a {
+  color: var(--foreground);
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.contactIcons a:hover {
+  color: var(--primary-color);
+  color: #9499a1;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #956afa;
+  animation: spin_4991 6s infinite;
+}
+@keyframes spin_4991 {
+  10% {
+    transform: translateY(-10%); /* Start at the initial position */
+  }
+
+  33% {
+    transform: translateY(-100%); /* Move the first word up */
+  }
+
+  66% {
+    transform: translateY(-200%); /* Move the second word up */
   }
 }
+
+@media (max-width: 768px) {
+  .grid, .skillGrid {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
