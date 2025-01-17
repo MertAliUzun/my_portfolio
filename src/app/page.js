@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
 import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase } from 'react-icons/si';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { projects } from './data/projects';
-import Lottie from "lottie-react";
+
+// Lottie'yi client-side'da dinamik olarak import et
+const Lottie = dynamic(() => import('lottie-react'), {
+  ssr: false, // Sunucu tarafında render edilmesini engelle
+});
 
 export default function Home() {
   const [hovering, setHovering] = useState(false);
@@ -13,6 +18,7 @@ export default function Home() {
   const [currentImage, setCurrentImage] = useState("avatar1.jpg");
   const [hoverAllowed, setHoverAllowed] = useState(true); 
   const [selectedProject, setSelectedProject] = useState(null);
+  const [animationData, setAnimationData] = useState(null);
 
   useEffect(() => {
     let interval;
@@ -41,6 +47,16 @@ export default function Home() {
     setCurrentImage((prev) => (prev === "avatar1.jpg" ? "avatar2.jpg" : "avatar1.jpg")); // Görseli değiştir
     setTimeout(() => setHoverAllowed(true), 100); // Hover yeniden aktif hale gelir
   };
+
+  // Animasyon verilerini yükle
+  useEffect(() => {
+    if (selectedProject?.animationPath) {
+      fetch(selectedProject.animationPath)
+        .then(response => response.json())
+        .then(data => setAnimationData(data))
+        .catch(error => console.error('Error loading animation:', error));
+    }
+  }, [selectedProject]);
 
   return (
     <div className="page">
@@ -174,10 +190,10 @@ export default function Home() {
                 ×
               </button>
               <div className="projectHero">
-                {selectedProject.animation ? (
+                {animationData ? (
                   <Lottie
-                    animationData={selectedProject.animation}
-                    style={{ width: 800, height: 400 }}
+                    animationData={animationData}
+                    style={{ width: "100%", height: "100%", objectFit: "contain" }}
                   />
                 ) : (
                   <Image

@@ -19,8 +19,8 @@ export default function ProjectDetail() {
         <Image
           src={project.image}
           alt={project.title}
-          width={800}
-          height={400}
+          width={800} //1130
+          height={400} //630
           objectFit="cover"
         />
       </div>
