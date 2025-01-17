@@ -528,15 +528,28 @@ a {
 }
 @keyframes spin_4991 {
   10% {
+    transform: translateY(-12%); /* Start at the initial position */
+  }
+  25% {
     transform: translateY(-10%); /* Start at the initial position */
   }
 
-  33% {
-    transform: translateY(-100%); /* Move the first word up */
+  45% {
+    transform: translateY(-102%); /* Move the first word up */
+  }
+  60% {
+    transform: translateY(-100%); /* Move the second word up */
   }
 
-  66% {
+  80% {
+    transform: translateY(-202%); /* Move the second word up */
+  }
+  95% {
     transform: translateY(-200%); /* Move the second word up */
+  }
+  
+  100% {
+    transform: translateY(-302%); /* Move the second word up */
   }
 }
 

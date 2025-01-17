@@ -73,5 +73,23 @@ export const projects = {
     technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/username/project"
+  },
+  movie_web: {
+    title: "Moving Company Website",
+    description: "SEO dostu, performanslı blog sistemi",
+    image: "/moving_company.png",
+    animationPath: "/moving_company.json",
+    features: [
+      "SEO optimizasyonu",
+      "Markdown desteği",
+      "Yorum sistemi",
+      "Kategori ve etiket yönetimi",
+      "Responsive tasarım",
+      "Sosyal medya paylaşımı",
+      "Analytics entegrasyonu"
+    ],
+    technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
+    demoUrl: "https://demo.example.com",
+    githubUrl: "https://github.com/username/project"
   }
 }; 
