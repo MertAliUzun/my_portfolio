@@ -64,8 +64,30 @@ export default function Home() {
       <div id="stars2"></div>
       <div id="stars3"></div>
       <main className="main">
-        <div className="hero" style={{marginTop: 250}}>
-        <div
+        <div className="hero" style={{marginTop: 250}}>  
+        <div class="profile">
+          <div class="profile-inner">
+            <div class="profile-front">
+            <Image
+                    src="/avatar1.jpg"
+                    alt="Avatar Front"
+                    width={200}
+                    height={200}
+                    className="avatar-image"
+                  />
+            </div>
+            <div class="profile-back">
+            <Image
+                    src="/avatar2.jpg"
+                    alt="Avatar Front"
+                    width={200}
+                    height={200}
+                    className="avatar-image"
+                  />
+            </div>
+          </div>
+        </div>
+        {/* <div
             className="image-container"
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
@@ -103,7 +125,7 @@ export default function Home() {
               className="avatar-image"
             />
             
-          </div>
+          </div>*/}
           <div className="text-container">
            <h2 style={{ fontSize: 16 }}>Hello I'm</h2>
            <h1 className="title">Mert Ali Uzun</h1>
@@ -161,11 +183,15 @@ export default function Home() {
                   <div className="cardInfo">
                     <h3 className="cardTitle">{project.title}</h3>
                     <p>{project.description}</p>
-                    <div className="tags">
-                      {project.technologies.slice(0, 3).map((tech, index) => (
-                        <span key={index}>{tech}</span>
+                    <div className="skillCard">
+                    <ul>
+                      {project.icons.slice(0, 3).map((Icon, index) => (
+                        <li key={index} data-description={`Kullanılan teknoloji: ${project.technologies[index]}`}>
+                          <Icon /> {project.technologies[index]}
+                        </li>
                       ))}
-                    </div>
+                    </ul>
+                  </div>
                   </div>
                   <button 
                     onClick={() => setSelectedProject(project)} 
@@ -217,16 +243,18 @@ export default function Home() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="projectTechnologies">
                   <h2>Kullanılan Teknolojiler</h2>
-                  <div className="tags">
-                    {selectedProject.technologies.map((tech, index) => (
-                      <span key={index}>{tech}</span>
+                  <div className="skillCard">
+                  <ul>
+                    {selectedProject.icons.map((Icon, index) => (
+                      <li key={index} data-description={`Kullanılan teknoloji: ${selectedProject.technologies[index]}`}>
+                        <Icon /> {selectedProject.technologies[index]}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
-
+                </div>
                 <div className="projectLinks">
                   <a 
                     href={selectedProject.demoUrl} 

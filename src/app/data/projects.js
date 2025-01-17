@@ -1,5 +1,5 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3 } from 'react-icons/si';
 
 export const projects = {
   gokturk: {
@@ -16,6 +16,7 @@ export const projects = {
       "Göktürkçe metin paylaşımı",
       "Göktürkçe öğrenme rehberi"
     ],
+    icons: [SiFlutter, SiDart],
     technologies: ["Flutter", "Dart"],
     demoUrl: "https://play.google.com/store/apps/details?id=your_app_id",
     githubUrl: "https://github.com/username/gokturk-app"
@@ -34,6 +35,7 @@ export const projects = {
       "Dosya paylaşımı",
       "İlerleme raporları"
     ],
+    icons: [SiFlutter, SiDart],
     technologies: ["Flutter", "Dart"],
     demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/username/project"
@@ -44,50 +46,53 @@ export const projects = {
     image: "/hms.png",
     animationPath: "/hms.json",
     features: [
-      "SEO optimizasyonu",
-      "Markdown desteği",
-      "Yorum sistemi",
-      "Kategori ve etiket yönetimi",
-      "Responsive tasarım",
-      "Sosyal medya paylaşımı",
-      "Analytics entegrasyonu"
+      "Hasta kayıt ve takip",
+      "Randevu sistemi",
+      "Doktor programı",
+      "Reçete yönetimi",
+      "Laboratuvar sonuçları",
+      "Fatura sistemi",
+      "Raporlama"
     ],
+    icons: [SiSharp, SiDotnet, SiMysql],
     technologies: ["C#", ".Net", "My SQL"],
     demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/username/project"
   },
   movie_web: {
     title: "Movie Collection Web App",
-    description: "SEO dostu, performanslı blog sistemi",
+    description: "Film Koleksiyonu Web Uygulaması",
     image: "/movie_web.png",
     animationPath: "/movie_web.json",
     features: [
-      "SEO optimizasyonu",
-      "Markdown desteği",
-      "Yorum sistemi",
-      "Kategori ve etiket yönetimi",
-      "Responsive tasarım",
-      "Sosyal medya paylaşımı",
-      "Analytics entegrasyonu"
+      "Film arama ve filtreleme",
+      "Koleksiyon oluşturma",
+      "Film detayları",
+      "Kullanıcı yorumları",
+      "Puan sistemi",
+      "Öneri sistemi",
+      "Favori listesi"
     ],
+    icons: [SiNextdotjs, SiMongodb, SiJavascript, SiHtml5, SiCss3],
     technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/username/project"
   },
-  movie_web: {
+  moving_company: {
     title: "Moving Company Website",
-    description: "SEO dostu, performanslı blog sistemi",
+    description: "Nakliyat Şirketi Web Sitesi",
     image: "/moving_company.png",
     animationPath: "/moving_company.json",
     features: [
-      "SEO optimizasyonu",
-      "Markdown desteği",
-      "Yorum sistemi",
-      "Kategori ve etiket yönetimi",
-      "Responsive tasarım",
-      "Sosyal medya paylaşımı",
-      "Analytics entegrasyonu"
+      "Online teklif alma",
+      "Hizmet bölgeleri",
+      "Müşteri yorumları",
+      "İletişim formu",
+      "Hizmet paketleri",
+      "Blog bölümü",
+      "Referanslar"
     ],
+    icons: [SiNextdotjs, SiMongodb, SiJavascript, SiHtml5, SiCss3],
     technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://demo.example.com",
     githubUrl: "https://github.com/username/project"
