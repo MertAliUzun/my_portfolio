@@ -24,6 +24,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <footer>
+      <p style={{ textAlign: 'center', fontSize: '14px', color: 'white', margin: '10px 0' }}>
+        &copy; 2025 Mert Ali Uzun. All rights reserved.
+      </p>
+      </footer>
       </body>
     </html>
   );

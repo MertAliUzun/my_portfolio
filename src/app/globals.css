@@ -273,7 +273,8 @@ a {
 }
 
 .card {
-  background: transparent;
+  background: rgb(23, 30, 44);
+  border-radius: 17px;
   padding: 1.5rem;
   border-radius: 8px;
   transition: transform 0.2s;
@@ -298,7 +299,7 @@ a {
 
 .viewProjectBtn {
   padding: 0.5rem 1rem;
-  background: #956afa;
+  background: rgb(21, 29, 43);
   color: white;
   border-radius: 8px;
   transition: all 0.2s;
@@ -309,6 +310,7 @@ a {
 .viewProjectBtn:hover {
   background: #7c4dff;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .aboutCard {
@@ -484,16 +486,26 @@ a {
 .contactButton:hover {
   transform: scale(1.1); /* Hover sırasında büyüt */
 }
+.contactButton1:hover {
+  color: rgb(0, 163, 85);
+}
+.contactButton2:hover {
+  color: rgb(36, 94, 255);
+}
+.contactButton3:hover {
+  color: rgb(0, 128, 0);
+}
+.contactButton4:hover {
+  color: rgb(0, 119, 181);
+}
+.contactButton5:hover {
+  color: rgb(37, 211, 102);
+}
 
 .contactIcons a {
   color: var(--foreground);
   font-size: 2rem;
   transition: color 0.2s;
-}
-
-.contactIcons a:hover {
-  color: var(--primary-color);
-  color: #8b5cf6;
 }
 .cvButton {
   background: transparent; /* Arka planı şeffaf yap */
@@ -671,8 +683,8 @@ a {
 }
 
 .projectBtn {
-  padding: 0.75rem 1.5rem;
-  background: #956afa;
+  padding: 0.75rem .5rem;
+  background: rgb(21, 29, 43);
   color: white;
   border-radius: 8px;
   transition: all 0.2s;
@@ -682,6 +694,7 @@ a {
 .projectBtn:hover {
   background: #7c4dff;
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .modalOverlay {
@@ -862,8 +875,118 @@ a {
   color: white;
 }
 
+.experience {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.toggle-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: rgb(21, 29, 43);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.toggle-btn.active {
+  background: #956afa;
+  transform: translateY(-2px);
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.timeline-date {
+  width: 30%;
+  text-align: right;
+  padding-right: 2rem;
+  color: #956afa;
+  font-weight: bold;
+}
+
+.timeline-content {
+  width: 70%;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #956afa;
+  border-radius: 50%;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.timeline-content h4 {
+  margin: 0.5rem 0;
+  color: #956afa;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #888;
+}
+footer {
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+  .profile:hover .profile-inner {
+    transform: rotateY(0deg); /* Hover işlemini iptal et */
+  }
+  .profile-inner {
+    transform: rotateY(0deg); /* Sadece ön yüz gözüksün */
+  }
   .hideMobile {
     display: none;
   }
@@ -920,10 +1043,13 @@ a {
   }
 
   .skillCard {
-    padding: 1rem; /* Adjust padding for skill cards */
+    padding: 0rem 0rem; /* Adjust padding for skill cards */
   }
   .skillCard ul {
     justify-content: center;
+  }
+  .skillCard li {
+    font-size: 11px;
   }
   .projectTitle {
     font-size: 24px;
@@ -933,10 +1059,6 @@ a {
   .projectHero {
     width: 100%; /* Make project hero responsive */
     height: auto; /* Adjust height */
-  }
-
-  .projectContent {
-    
   }
 
   .projectLinks {
@@ -969,4 +1091,34 @@ a {
   .contactButton {
     margin: 0.5rem 0; /* Add margin between buttons */
   }
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-date {
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .timeline-content::before {
+    left: -6px;
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
+

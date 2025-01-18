@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaCode , FaGlobe, FaMapMarkerAlt, FaHtml5, FaExternalLinkAlt, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
 import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiReact } from 'react-icons/si';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -19,7 +19,7 @@ export default function Home() {
   const [hoverAllowed, setHoverAllowed] = useState(true); 
   const [selectedProject, setSelectedProject] = useState(null);
   const [animationData, setAnimationData] = useState(null);
-
+  const [activeTab, setActiveTab] = useState('work');
   useEffect(() => {
     let interval;
     if (hovering && hoverAllowed) {
@@ -133,19 +133,19 @@ export default function Home() {
            <h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />Trabzon/Turkiye</h2>
 
             <div className="contactIcons">
-            <a href="mailto:your.email@example.com" aria-label="Email" className="contactButton">
-              <FaEnvelope />
-            </a>
-            <a href="https://github.com/yourusername" aria-label="GitHub" className="contactButton">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn" className="contactButton">
-              <FaLinkedin />
-            </a>
-            <a href="tel:+1234567890" aria-label="Phone" className="contactButton">
+            <a href="tel:+1234567890" aria-label="Phone" className="contactButton contactButton1">
               <FaPhone />
             </a>
-            <a href="https://wa.me/1234567890" aria-label="WhatsApp" className="contactButton">
+            <a href="https://github.com/yourusername" aria-label="GitHub" className="contactButton contactButton2">
+              <FaGithub />
+            </a>
+            <a href="mailto:your.email@example.com" aria-label="Email" className="contactButton contactButton3">
+              <FaEnvelope />
+            </a>
+            <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn" className="contactButton contactButton4">
+              <FaLinkedin />
+            </a>
+            <a href="https://wa.me/1234567890" aria-label="WhatsApp" className="contactButton contactButton5">
               <FaWhatsapp />
             </a>
           </div>
@@ -177,13 +177,13 @@ export default function Home() {
                       <Image
                         src={project.image}
                         alt={project.title}
-                        width={100}
-                        height={175}
+                        width={150}
+                        height={255}
                         objectFit="cover"
                       />
                   </div>
                   <div className="cardInfo">
-                    <h3 className="cardTitle">{project.title}</h3>
+                    <h3 className="cardTitle spaceFont">{project.title}</h3>
                     <p className="hideMobile">{project.description}</p>
                     <div className="skillCard hideMobile">
                     <ul>
@@ -199,7 +199,7 @@ export default function Home() {
                     onClick={() => setSelectedProject(project)} 
                     className="viewProjectBtn"
                   >
-                    View Project
+                   View Project <FaExternalLinkAlt style={{marginLeft: 5}} />  
                   </button>
                 </div>
               </div>
@@ -247,7 +247,7 @@ export default function Home() {
                     }
                   }}
                 >
-                Try it Out
+                <FaGlobe /> Try it Out
                 </a>
                   <a 
                     href={selectedProject.githubUrl} 
@@ -255,7 +255,7 @@ export default function Home() {
                     rel="noopener noreferrer" 
                     className="projectBtn"
                   >
-                    GitHub
+                   <FaCode /> Source Code
                   </a>
                 </div>
               <div className="projectContent">
@@ -344,6 +344,60 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+          </div>
+        </section>  
+
+
+        <section className="experience" style={{marginTop: 100, marginBottom: 100}}>
+          <h2 className="sectionTitle spaceFont">Experience</h2>
+          
+          <div className="toggle-container">
+            <button 
+              className={`toggle-btn ${activeTab === 'work' ? 'active' : ''}`}
+              onClick={() => setActiveTab('work')}
+            >
+              Work
+            </button>
+            <button 
+              className={`toggle-btn ${activeTab === 'education' ? 'active' : ''}`}
+              onClick={() => setActiveTab('education')}
+            >
+              Education
+            </button>
+          </div>
+
+          <div className="timeline">
+            {activeTab === 'work' ? (
+              <>
+                <div className="timeline-item">
+                  <div className="timeline-date">2024 April - 2024 June</div>
+                  <div className="timeline-content">
+                    <h3>Intern Flutter</h3>
+                    <h4>Phi Software</h4>
+                    <p>Learned about mobile development environment and used Flutter and Dart to build an app that also uses calls for API</p>
+                  </div>
+                </div>
+                <div className="timeline-item">
+                  <div className="timeline-date">2022 June - 2022 August</div>
+                  <div className="timeline-content">
+                    <h3>Intern DevOps</h3>
+                    <h4>Trabzon Ortahisar Belediyesi</h4>
+                    <p>Learned about Git, DevOps and .NET project environment.</p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="timeline-item">
+                  <div className="timeline-date">2018 Sept. - 2024 June</div>
+                  <div className="timeline-content">
+                    <h3>Computer Engineering</h3>
+                    <h4>Duzce University</h4>
+                    <p>Bachelor's Degree • GPA: 2.99</p>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </section>
 
