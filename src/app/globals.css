@@ -502,15 +502,21 @@ a {
   padding: 0.5rem .5rem;
   transition: all 0.2s;
 }
+.cvButton h2 {
+  color: #8b5cf6;
+}
 
 .cvButton:hover {
   transform: scale(1.1); /* Hover sırasında büyüt */
   background-color: #8b5cf6;
   border-color: #8b5cf6;
 }
+.cvButton:hover h2 {
+  color: white; /* Hover sırasında h2 yazısını beyaz yap */
+}
 .cvButton-outline {
   background-color: transparent;
-  border: 5px solid gray;
+  border: 1px solid #8b5cf6;;
   color: white;
 }
 .text-container {
