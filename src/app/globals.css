@@ -245,6 +245,7 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-top: 15rem;
 }
 
 .avatar {
@@ -282,6 +283,7 @@ a {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  text-align: center;
 }
 
 .cardImage {
@@ -318,6 +320,7 @@ a {
   background-color: transparent;
   display: flex;
   justify-content: center;  /* Yatayda ortalar */
+  margin-top: 8rem;
 }
 
 .card:hover {
@@ -504,6 +507,8 @@ a {
   font-weight: 500;
   padding: 0.5rem .5rem;
   transition: all 0.2s;
+  margin-top: .5rem; 
+  margin-left: 4.8rem;
 }
 .cvButton h2 {
   color: #8b5cf6;
@@ -593,12 +598,6 @@ a {
   }
 }
 
-@media (max-width: 768px) {
-  .grid, .skillGrid {
-    grid-template-columns: 1fr;
-  }
-  
-}
 .projectTitle{
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
@@ -861,4 +860,113 @@ a {
   background-color: #8b5cf6;
   border-color: #8b5cf6;
   color: white;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hideMobile {
+    display: none;
+  }
+  .sectionTitle {
+    text-align: center;
+  }
+  .aboutCard {
+    margin-top: 6rem;
+  }
+  .loader {
+    font-size: 18px;
+  }
+  .cvButton {
+    margin-left: 0rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .grid, .skillGrid {
+    grid-template-columns: 1fr;
+  }
+  .main {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  .hero {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    margin-top: 10rem;
+  }
+
+  .profile {
+    width: 100%; /* Make profile take full width */
+    height: auto; /* Adjust height */
+  }
+
+  .card {
+    flex-direction: column; /* Stack card content vertically */
+  }
+
+  .cardContent {
+    flex-direction: column; /* Stack card content vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .cardImage {
+    width: 100%; /* Make card image responsive */
+    height: auto; /* Adjust height */
+  }
+
+  .tags {
+    flex-direction: column; /* Stack tags vertically */
+    align-items: center; /* Center align tags */
+  }
+
+  .skillCard {
+    padding: 1rem; /* Adjust padding for skill cards */
+  }
+  .skillCard ul {
+    justify-content: center;
+  }
+  .projectTitle {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .projectHero {
+    width: 100%; /* Make project hero responsive */
+    height: auto; /* Adjust height */
+  }
+
+  .projectContent {
+    
+  }
+
+  .projectLinks {
+    align-items: center; /* Center align links */
+    margin-bottom: .5rem;
+  }
+
+  .projectBtn {
+    width: 50%; /* Make buttons full width */
+    margin-bottom: 0.5rem; /* Add margin between buttons */
+    font-size: 12px;
+  }
+  .projectDescription {
+    font-size: 17px;
+    padding: 1rem 0rem;
+  }
+
+  .text-container {
+    text-align: center; /* Center text on smaller screens */
+  }
+  .text-container h3 {
+    margin-top: 5rem;
+  }
+
+  .contactIcons {
+    flex-direction: row; /* Stack contact icons vertically */
+    align-items: center; /* Center align icons */
+  }
+
+  .contactButton {
+    margin: 0.5rem 0; /* Add margin between buttons */
+  }
 }

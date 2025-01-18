@@ -80,7 +80,7 @@ export const projects = {
   },
   moving_company: {
     title: "Moving Company Website",
-    description: "This Website is Both Advertises Company and Helps Customers Track Their Cargo",
+    description: "This Website Advertises Company and Helps Customers Track Their Cargo",
     image: "/moving_company.png",
     animationPath: "/moving_company.json",
     features: [

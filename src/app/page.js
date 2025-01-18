@@ -64,7 +64,7 @@ export default function Home() {
       <div id="stars2"></div>
       <div id="stars3"></div>
       <main className="main">
-        <div className="hero" style={{marginTop: 250}}>  
+        <div className="hero">  
         <div class="profile">
           <div class="profile-inner">
             <div class="profile-front">
@@ -127,7 +127,7 @@ export default function Home() {
             
           </div>*/}
           <div className="text-container">
-           <h2 style={{ fontSize: 16, color: "grey" }}>Hello I'm</h2>
+           <h3 style={{ fontSize: 16, color: "grey" }}>Hello I'm</h3>
            <h1 className="title">Mert Ali Uzun</h1>
            <h1 style={{ color: '#956afa', fontSize: 28 }}> <span style={{ color: 'grey' }}>a</span> Full-Stack Developer</h1>
            <h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />Trabzon/Turkiye</h2>
@@ -150,13 +150,13 @@ export default function Home() {
             </a>
           </div>
           <div>
-          <a href="/path/to/your/pdf.pdf" download className="cvButton cvButton-outline" style={{ marginTop: '.5rem', marginLeft: '4.8rem'}}>
+          <a href="/path/to/your/pdf.pdf" download className="cvButton cvButton-outline">
               <h2 style={{ fontSize: 16 }}> Download CV  <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
             </a>
             </div>
          </div>
          </div>      
-         <div class="aboutCard" style={{marginTop: 125}}>
+         <div class="aboutCard">
          <div class="loader">
            <p>I Develop</p>
            <div class="words">
@@ -184,8 +184,8 @@ export default function Home() {
                   </div>
                   <div className="cardInfo">
                     <h3 className="cardTitle">{project.title}</h3>
-                    <p>{project.description}</p>
-                    <div className="skillCard">
+                    <p className="hideMobile">{project.description}</p>
+                    <div className="skillCard hideMobile">
                     <ul>
                       {project.icons.slice(0, 3).map((Icon, index) => (
                         <li key={index} data-description={`Kullanılan teknoloji: ${project.technologies[index]}`}>
