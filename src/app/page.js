@@ -133,24 +133,24 @@ export default function Home() {
            <h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />Trabzon/Turkiye</h2>
 
             <div className="contactIcons">
-            <a href="tel:+1234567890" aria-label="Phone" className="contactButton contactButton1">
+            <a href="tel:+905315652141" aria-label="Phone" className="contactButton contactButton1">
               <FaPhone />
             </a>
-            <a href="https://github.com/yourusername" aria-label="GitHub" className="contactButton contactButton2">
+            <a href="https://github.com/MertAliUzun" aria-label="GitHub" className="contactButton contactButton2">
               <FaGithub />
             </a>
-            <a href="mailto:your.email@example.com" aria-label="Email" className="contactButton contactButton3">
+            <a href="mailto:a_mert_uzun@hotmail.com" aria-label="Email" className="contactButton contactButton3">
               <FaEnvelope />
             </a>
-            <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn" className="contactButton contactButton4">
+            <a href="https://www.linkedin.com/in/mert-ali-uzun/" aria-label="LinkedIn" className="contactButton contactButton4">
               <FaLinkedin />
             </a>
-            <a href="https://wa.me/1234567890" aria-label="WhatsApp" className="contactButton contactButton5">
+            <a href="https://wa.me/905315652141" aria-label="WhatsApp" className="contactButton contactButton5">
               <FaWhatsapp />
             </a>
           </div>
           <div>
-          <a href="/path/to/your/pdf.pdf" download className="cvButton cvButton-outline">
+          <a href="mert_ali_uzun_cv.pdf" download className="cvButton cvButton-outline">
               <h2 style={{ fontSize: 16 }}> Download CV  <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
             </a>
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
                   </div>
                   <div className="cardInfo">
                     <h3 className="cardTitle spaceFont">{project.title}</h3>
-                    <p className="hideMobile">{project.description}</p>
+                    <p className="hideMobile cardDescription">{project.description}</p>
                     <div className="skillCard hideMobile">
                     <ul>
                       {project.icons.slice(0, 3).map((Icon, index) => (

@@ -296,6 +296,9 @@ a {
 .cardInfo {
   flex-grow: 1;
 }
+.cardDescription{
+  margin-top: 3rem;
+}
 
 .viewProjectBtn {
   padding: 0.5rem 1rem;
