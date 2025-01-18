@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiReact } from 'react-icons/si';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { projects } from './data/projects';
@@ -150,8 +150,8 @@ export default function Home() {
             </a>
           </div>
           <div>
-          <a href="/path/to/your/pdf.pdf" download className="cvButton cvButton-outline" style={{ marginTop: '.5rem', marginLeft: '2.2rem'}}>
-              <h2 style={{ fontSize: 26 }}> Download CV  <FaDownload style={{ marginLeft: 8,}} /></h2>
+          <a href="/path/to/your/pdf.pdf" download className="cvButton cvButton-outline" style={{ marginTop: '.5rem', marginLeft: '4.8rem'}}>
+              <h2 style={{ fontSize: 16 }}> Download CV  <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
             </a>
             </div>
          </div>
@@ -293,20 +293,23 @@ export default function Home() {
             <div className="skillCard">
               <h4 className="skillTitle">Frontend</h4>
               <ul>
-                <li data-description="Developing user interfaces with HTML">
-                  <FaHtml5 /> HTML
-                </li>
-                <li data-description="Designing styles and layouts with CSS">
-                  <FaCss3Alt /> CSS
-                </li>
-                <li data-description="Creating interactive web content with JavaScript">
-                  <FaJs /> JavaScript
+              <li data-description="Designing websites with React">
+                  <SiReact /> React
                 </li>
                 <li data-description="Using C# for application and game development">
                   <SiSharp /> C#
                 </li>
                 <li data-description="Programming with Dart for Flutter applications">
                   <SiDart /> Dart
+                </li>
+                <li data-description="Creating interactive web content with JavaScript">
+                  <FaJs /> JavaScript
+                </li>
+                <li data-description="Designing styles and layouts with CSS">
+                  <FaCss3Alt /> CSS
+                </li>
+                <li data-description="Developing user interfaces with HTML">
+                  <FaHtml5 /> HTML
                 </li>
               </ul>
             </div>

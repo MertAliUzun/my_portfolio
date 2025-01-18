@@ -1,5 +1,5 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3 } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
 
 export const projects = {
   gokturk: {
@@ -73,8 +73,8 @@ export const projects = {
       "Movies can be Rated",
       "Sorting System",
     ],
-    icons: [SiNextdotjs, SiMongodb, SiJavascript, SiHtml5, SiCss3],
-    technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
+    icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
+    technologies: ["NextJS", "MongoDB", "React", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://moviecollection-gamma.vercel.app/",
     githubUrl: "https://github.com/MertAliUzun/movie_collection"
   },
@@ -93,8 +93,8 @@ export const projects = {
       "FAQ Section",
       "Contact Section"
     ],
-    icons: [SiNextdotjs, SiMongodb, SiJavascript, SiHtml5, SiCss3],
-    technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
+    icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
+    technologies: ["NextJS", "MongoDB", "React", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://www.nakliyatvatan.com.tr/",
     githubUrl: "https://github.com/MertAliUzun/movingcompweb"
   }
