@@ -4,97 +4,98 @@ import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, 
 export const projects = {
   gokturk: {
     title: "GökTürk App",
-    description: "Göktürkçe Öğrenme, Çeviri, Kurallar ve Sözlük Uygulaması",
+    description: "An App to Learn and Translate Göktürk. Also has Dictionary, Proverbs and Inscriptions",
     image: "/gokturk_app.png",
     animationPath: "/gokturk_app.json",
     features: [
-      "Türkçe-Göktürkçe çeviri",
-      "Göktürkçe yazı sistemi kuralları",
-      "Kapsamlı Göktürkçe sözlük",
-      "Göktürkçe klavye",
-      "Offline kullanım desteği",
-      "Göktürkçe metin paylaşımı",
-      "Göktürkçe öğrenme rehberi"
+      "Translate From Latin Turkish to Gokturk",
+      "Alphabet of Gokturk",
+      "Rules of Gokturk Alphabet",
+      "Gokturk Dictionary That can be Searched With Both Latin and Gokturk letters",
+      "Gokturk Proverbs",
+      "Gokturk Alphabet-Latin Alphabet and Modern Turkish Translation of Orkhon Inscriptions",
     ],
     icons: [SiFlutter, SiDart],
     technologies: ["Flutter", "Dart"],
-    demoUrl: "https://play.google.com/store/apps/details?id=your_app_id",
-    githubUrl: "https://github.com/username/gokturk-app"
+    demoUrl: "none",
+    githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
   taskManager: {
     title: "Weather App",
-    description: "Ekip çalışmasını kolaylaştıran proje yönetim aracı",
+    description: "An App that shows Weather Related Data for Chosen Location",
     image: "/weather_app.png",
     animationPath: "/weather_app.json",
     features: [
-      "Görev oluşturma ve atama",
-      "Proje takibi",
-      "Ekip yönetimi",
-      "Bildirim sistemi",
-      "Takvim entegrasyonu",
-      "Dosya paylaşımı",
-      "İlerleme raporları"
+      "Uses OpenWeatherMap API for Data",
+      "Asks for Location Permission",
+      "Shows Data for Your Location",
+      "Can Choose Another Location for Weather",
+      "Can Search Location",
+      "Weather is Shown for Current, Every 3 Hours, and Everyday for Next 5 Days",
+      "Can Show; Weather, Wind Speed, Humidity and Temperature"
     ],
     icons: [SiFlutter, SiDart],
     technologies: ["Flutter", "Dart"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    demoUrl: "none",
+    githubUrl: "https://github.com/MertAliUzun/weather_app"
   },
   hms: {
-    title: "Hospital Management System",
-    description: "SEO dostu, performanslı blog sistemi",
+    title: "Hospital Management App",
+    description: "This App can be Used by Doctors and Secretaries",
     image: "/hms.png",
     animationPath: "/hms.json",
     features: [
-      "Hasta kayıt ve takip",
-      "Randevu sistemi",
-      "Doktor programı",
-      "Reçete yönetimi",
-      "Laboratuvar sonuçları",
-      "Fatura sistemi",
-      "Raporlama"
+      "Multi-Layered Design Architecture",
+      "Database Models for Appointments, Secretaries, Doctors, Patients",
+      "Login System that Detects if You are an Secretary or a Doctor",
+      "Doctors can Record their Chat with Patients",
+      "They can See Health Documents and Handle Prescriptions",
+      "Secretaries can CRUD all Models",
+      "Secretaries Create Appointments if the Doctor's Experties and Patients Problem Match",
     ],
     icons: [SiSharp, SiDotnet, SiMysql],
     technologies: ["C#", ".Net", "My SQL"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    demoUrl: "https://github.com/MertAliUzun/HMS/tree/main/Setup",
+    githubUrl: "https://github.com/MertAliUzun/HMS"
   },
   movie_web: {
     title: "Movie Collection Web App",
-    description: "Film Koleksiyonu Web Uygulaması",
+    description: "Users Can Add and Manage Their Movies in Their Collections and Wishlists",
     image: "/movie_web.png",
     animationPath: "/movie_web.json",
     features: [
-      "Film arama ve filtreleme",
-      "Koleksiyon oluşturma",
-      "Film detayları",
-      "Kullanıcı yorumları",
-      "Puan sistemi",
-      "Öneri sistemi",
-      "Favori listesi"
+      "This Project uses TMDB API",
+      "Movies can be Searched",
+      "Login and Register System",
+      "You can Add a Movie to Collection or Wishlist",
+      "Every Movie is Added to Logged in User",
+      "Movies can be Edited and Deleted",
+      "Movies can be Rated",
+      "Sorting System",
     ],
     icons: [SiNextdotjs, SiMongodb, SiJavascript, SiHtml5, SiCss3],
     technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    demoUrl: "https://moviecollection-gamma.vercel.app/",
+    githubUrl: "https://github.com/MertAliUzun/movie_collection"
   },
   moving_company: {
     title: "Moving Company Website",
-    description: "Nakliyat Şirketi Web Sitesi",
+    description: "This Website is Both Advertises Company and Helps Customers Track Their Cargo",
     image: "/moving_company.png",
     animationPath: "/moving_company.json",
     features: [
-      "Online teklif alma",
-      "Hizmet bölgeleri",
-      "Müşteri yorumları",
-      "İletişim formu",
-      "Hizmet paketleri",
-      "Blog bölümü",
-      "Referanslar"
+      "Cargos are Recorded",
+      "Customers can Track Cargos with Track No",
+      "Location, Time and State of Cargos can be Tracked",
+      "Customer Comments",
+      "Services are Explained",
+      "Where Company Provides Services is Shown",
+      "FAQ Section",
+      "Contact Section"
     ],
     icons: [SiNextdotjs, SiMongodb, SiJavascript, SiHtml5, SiCss3],
     technologies: ["NextJS", "MongoDB", "JavaScript", "HTML", "CSS"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    demoUrl: "https://www.nakliyatvatan.com.tr/",
+    githubUrl: "https://github.com/MertAliUzun/movingcompweb"
   }
 }; 

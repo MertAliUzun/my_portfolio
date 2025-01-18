@@ -465,7 +465,14 @@ a {
   background: transparent; /* Arka planı şeffaf yap */
   border: none; /* Kenarlıkları kaldır */
   cursor: pointer; /* İmleci göster */
-  transition: transform 0.2s; /* Hover efekti için geçiş */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem .5rem;
+  transition: all 0.2s;
 }
 
 .contactButton:hover {
@@ -480,7 +487,31 @@ a {
 
 .contactIcons a:hover {
   color: var(--primary-color);
-  color: #9499a1;
+  color: #8b5cf6;
+}
+.cvButton {
+  background: transparent; /* Arka planı şeffaf yap */
+  border: none; /* Kenarlıkları kaldır */
+  cursor: pointer; /* İmleci göster */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem .5rem;
+  transition: all 0.2s;
+}
+
+.cvButton:hover {
+  transform: scale(1.1); /* Hover sırasında büyüt */
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+.cvButton-outline {
+  background-color: transparent;
+  border: 5px solid gray;
+  color: white;
 }
 .text-container {
   display: flex;
@@ -528,10 +559,10 @@ a {
 }
 @keyframes spin_4991 {
   10% {
-    transform: translateY(-12%); /* Start at the initial position */
+    transform: translateY(-10%); /* Start at the initial position */
   }
   25% {
-    transform: translateY(-10%); /* Start at the initial position */
+    transform: translateY(-0%); /* Start at the initial position */
   }
 
   45% {
@@ -549,7 +580,7 @@ a {
   }
   
   100% {
-    transform: translateY(-302%); /* Move the second word up */
+    transform: translateY(-275%); /* Move the second word up */
   }
 }
 
@@ -559,11 +590,30 @@ a {
   }
   
 }
+.projectTitle{
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  justify-self: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
 
 .projectDetail {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+.projectDescription{
+  justify-self: center;
+  font-size: 1.5rem;
+  padding: 2rem 2rem;
+  text-align: center;
 }
 
 .projectHero {
@@ -606,7 +656,10 @@ a {
 .projectLinks {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
 .projectBtn {
@@ -777,4 +830,26 @@ a {
   gap: 5px;
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
 
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--foreground);
+}
+
+.btn-outline:hover {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+  color: white;
+}

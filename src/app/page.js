@@ -127,10 +127,10 @@ export default function Home() {
             
           </div>*/}
           <div className="text-container">
-           <h2 style={{ fontSize: 16 }}>Hello I'm</h2>
+           <h2 style={{ fontSize: 16, color: "grey" }}>Hello I'm</h2>
            <h1 className="title">Mert Ali Uzun</h1>
-           <h1 style={{ color: '#956afa', fontSize: 28 }}>a Full-Stack Developer</h1>
-           <h2 style={{ fontSize: 20, marginTop: 10 }}> <FaMapMarkerAlt style={{ marginRight: 8 }} />Trabzon/Turkiye</h2>
+           <h1 style={{ color: '#956afa', fontSize: 28 }}> <span style={{ color: 'grey' }}>a</span> Full-Stack Developer</h1>
+           <h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />Trabzon/Turkiye</h2>
 
             <div className="contactIcons">
             <a href="mailto:your.email@example.com" aria-label="Email" className="contactButton">
@@ -149,12 +149,14 @@ export default function Home() {
               <FaWhatsapp />
             </a>
           </div>
-          <a href="/path/to/your/pdf.pdf" download className="contactButton" style={{ marginTop: '.5rem', }}>
-              <h2 style={{ fontSize: 26 }}> Download CV  <FaDownload style={{ marginLeft: 8, color: '#956afa'}} /></h2>
+          <div>
+          <a href="/path/to/your/pdf.pdf" download className="cvButton cvButton-outline" style={{ marginTop: '.5rem', marginLeft: '2.2rem'}}>
+              <h2 style={{ fontSize: 26 }}> Download CV  <FaDownload style={{ marginLeft: 8,}} /></h2>
             </a>
+            </div>
          </div>
          </div>      
-         <div class="aboutCard" style={{marginTop: 150}}>
+         <div class="aboutCard" style={{marginTop: 125}}>
          <div class="loader">
            <p>I Develop</p>
            <div class="words">
@@ -215,6 +217,7 @@ export default function Home() {
               >
                 ×
               </button>
+              <h1 className="projectTitle">{selectedProject.title}</h1>
               <div className="projectHero">
                 {animationData ? (
                   <Lottie
@@ -231,12 +234,36 @@ export default function Home() {
                   />
                 )}
               </div>
+              <div className="projectLinks">
+                <a
+                  href={selectedProject.demoUrl !== 'none' ? selectedProject.demoUrl : '#'}
+                  target={selectedProject.demoUrl !== 'none' ? '_blank' : undefined}
+                  rel="noopener noreferrer"
+                  className="projectBtn"
+                  onClick={(e) => {
+                    if (selectedProject.demoUrl === 'none') {
+                      e.preventDefault();  // Prevent link navigation
+                      alert('Project is not yet published');
+                    }
+                  }}
+                >
+                Try it Out
+                </a>
+                  <a 
+                    href={selectedProject.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="projectBtn"
+                  >
+                    GitHub
+                  </a>
+                </div>
               <div className="projectContent">
-                <h1>{selectedProject.title}</h1>
+                
                 <p className="projectDescription">{selectedProject.description}</p>
 
                 <div className="projectFeatures">
-                  <h2>Özellikler</h2>
+                  <h2>Features</h2>
                   <ul>
                     {selectedProject.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
@@ -244,7 +271,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="projectTechnologies">
-                  <h2>Kullanılan Teknolojiler</h2>
+                  <h2>Technologies Used</h2>
                   <div className="skillCard">
                   <ul>
                     {selectedProject.icons.map((Icon, index) => (
@@ -254,24 +281,6 @@ export default function Home() {
                     ))}
                   </ul>
                 </div>
-                </div>
-                <div className="projectLinks">
-                  <a 
-                    href={selectedProject.demoUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="projectBtn"
-                  >
-                    Live Demo
-                  </a>
-                  <a 
-                    href={selectedProject.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="projectBtn"
-                  >
-                    GitHub
-                  </a>
                 </div>
               </div>
             </div>
