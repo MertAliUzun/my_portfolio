@@ -6,6 +6,7 @@ import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, 
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { projects } from './data/projects';
+import TopBar from './topbar.js'
 
 // Lottie'yi client-side'da dinamik olarak import et
 const Lottie = dynamic(() => import('lottie-react'), {
@@ -64,6 +65,7 @@ export default function Home() {
       <div id="stars2"></div>
       <div id="stars3"></div>
       <main className="main">
+        <TopBar />
         <div className="hero">  
         <div class="profile">
           <div class="profile-inner">
@@ -149,7 +151,7 @@ export default function Home() {
               <FaWhatsapp />
             </a>
           </div>
-          <div>
+          <div className="downloadCV">
           <a href="mert_ali_uzun_cv.pdf" download className="cvButton cvButton-outline">
               <h2 style={{ fontSize: 16 }}> Download CV  <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
             </a>
@@ -167,7 +169,7 @@ export default function Home() {
          </div>
        </div> 
  
-        <section className="projects" style={{marginTop: 100}}>
+        <section className="projects" id="projects" style={{marginTop: 100}}>
           <h2 className="sectionTitle spaceFont">Projects</h2>
           <div className="grid">
             {Object.entries(projects).map(([key, project]) => (
@@ -189,7 +191,7 @@ export default function Home() {
                     <ul>
                       {project.icons.slice(0, 3).map((Icon, index) => (
                         <li key={index} data-description={`Kullanılan teknoloji: ${project.technologies[index]}`}>
-                          <Icon /> {project.technologies[index]}
+                          <Icon style={{ color: project.iconColors[index] }}/> {project.technologies[index]}
                         </li>
                       ))}
                     </ul>
@@ -273,43 +275,43 @@ export default function Home() {
                 <div className="projectTechnologies">
                   <h2>Technologies Used</h2>
                   <div className="skillCard">
-                  <ul>
-                    {selectedProject.icons.map((Icon, index) => (
-                      <li key={index} data-description={`Kullanılan teknoloji: ${selectedProject.technologies[index]}`}>
-                        <Icon /> {selectedProject.technologies[index]}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                    <ul>
+                      {selectedProject.icons.map((Icon, index) => (
+                        <li key={index} data-description={`Kullanılan teknoloji: ${selectedProject.technologies[index]}`}>
+                          <Icon style={{ color: selectedProject.iconColors[index] }} /> {selectedProject.technologies[index]}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         )}
 
-        <section className="skills">
+        <section className="skills" id="skills">
           <h2 className="sectionTitle spaceFont">Skills</h2>
           <div className="skillGrid">
             <div className="skillCard">
               <h4 className="skillTitle">Frontend</h4>
               <ul>
               <li data-description="Designing websites with React">
-                  <SiReact /> React
+                  <SiReact style={{ color: 'rgb(97, 218, 251)' }}/> React
                 </li>
                 <li data-description="Using C# for application and game development">
-                  <SiSharp /> C#
+                  <SiSharp style={{ color: 'rgb(138, 43, 226)' }} /> C#
                 </li>
                 <li data-description="Programming with Dart for Flutter applications">
-                  <SiDart /> Dart
+                  <SiDart style={{ color: 'rgb(0, 188, 212)' }}/> Dart
                 </li>
                 <li data-description="Creating interactive web content with JavaScript">
-                  <FaJs /> JavaScript
+                  <FaJs style={{ color: 'rgb(255, 221, 51)' }}/> JavaScript
                 </li>
                 <li data-description="Designing styles and layouts with CSS">
-                  <FaCss3Alt /> CSS
+                  <FaCss3Alt style={{ color: 'rgb(38, 87, 255)' }} /> CSS
                 </li>
                 <li data-description="Developing user interfaces with HTML">
-                  <FaHtml5 /> HTML
+                  <FaHtml5 style={{ color: 'rgb(239, 41, 41)' }}/> HTML
                 </li>
               </ul>
             </div>
@@ -317,13 +319,13 @@ export default function Home() {
               <h4 className="skillTitle">Backend</h4>
               <ul>
                 <li data-description="Managing data with the NoSQL database MongoDB">
-                  <SiMongodb /> MongoDB
+                  <SiMongodb style={{ color: 'rgb(0, 184, 69)' }}/> MongoDB
                 </li>
                 <li data-description="Working with relational databases using MySQL">
-                  <SiMysql /> MySQL
+                  <FaDatabase style={{ color: 'rgb(38, 87, 255)' }}/> MsSQL
                 </li>
                 <li data-description="Backend-as-a-Service platform for scalable apps">
-                  <SiSupabase /> Supabase
+                  <SiSupabase style={{ color: 'rgb(34, 197, 94)' }}/> Supabase
                 </li>
               </ul>
             </div>
@@ -331,16 +333,16 @@ export default function Home() {
               <h4 className="skillTitle">Frameworks</h4>
               <ul>
                 <li data-description="Building cross-platform mobile applications with Flutter">
-                  <SiFlutter /> Flutter
+                  <SiFlutter style={{ color: 'rgb(66, 133, 244)' }}/> Flutter
                 </li>
                 <li data-description="Developing server-side rendered applications with Next.js">
-                  <SiNextdotjs /> Next.js
+                  <SiNextdotjs style={{ color: 'rgb(169, 169, 169)' }}/> Next.js
                 </li>
                 <li data-description="Building enterprise-level applications with .NET framework">
-                  <SiDotnet /> .NET
+                  <SiDotnet style={{ color: 'rgb(101, 101, 255)' }}/> .NET
                 </li>
                 <li data-description="Creating 2D and 3D games using Unity engine">
-                  <SiUnity /> Unity
+                  <SiUnity style={{ color: 'rgb(53, 58, 155)' }}/> Unity
                 </li>
               </ul>
             </div>
@@ -348,7 +350,7 @@ export default function Home() {
         </section>  
 
 
-        <section className="experience" style={{marginTop: 100, marginBottom: 100}}>
+        <section className="experience" id="experience" style={{marginTop: 100, marginBottom: 100}}>
           <h2 className="sectionTitle spaceFont">Experience</h2>
           
           <div className="toggle-container">

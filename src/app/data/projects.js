@@ -16,6 +16,7 @@ export const projects = {
       "Gokturk Alphabet-Latin Alphabet and Modern Turkish Translation of Orkhon Inscriptions",
     ],
     icons: [SiFlutter, SiDart],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
     demoUrl: "none",
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
@@ -35,13 +36,14 @@ export const projects = {
       "Can Show; Weather, Wind Speed, Humidity and Temperature"
     ],
     icons: [SiFlutter, SiDart],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
     demoUrl: "none",
     githubUrl: "https://github.com/MertAliUzun/weather_app"
   },
   hms: {
-    title: "Hospital Management App",
-    description: "This App can be Used by Doctors and Secretaries",
+    title: "Hospital Management System",
+    description: "This App can be Used by Doctors and Secretaries to Manage Hospital Business",
     image: "/hms.png",
     animationPath: "/hms.json",
     features: [
@@ -53,8 +55,9 @@ export const projects = {
       "Secretaries can CRUD all Models",
       "Secretaries Create Appointments if the Doctor's Experties and Patients Problem Match",
     ],
-    icons: [SiSharp, SiDotnet, SiMysql],
-    technologies: ["C#", ".Net", "My SQL"],
+    icons: [SiSharp, SiDotnet, FaDatabase],
+    iconColors: ['rgb(138, 43, 226)', 'rgb(101, 101, 255)', 'rgb(38, 87, 255)'],
+    technologies: ["C#", ".Net", "Ms SQL"],
     demoUrl: "https://github.com/MertAliUzun/HMS/tree/main/Setup",
     githubUrl: "https://github.com/MertAliUzun/HMS"
   },
@@ -74,6 +77,7 @@ export const projects = {
       "Sorting System",
     ],
     icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
+    iconColors: ['rgb(169, 169, 169)', 'rgb(0, 184, 69)', 'rgb(97, 218, 251)', 'rgb(255, 221, 51)', 'rgb(38, 87, 255)', 'rgb(239, 41, 41)'],
     technologies: ["NextJS", "MongoDB", "React", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://moviecollection-gamma.vercel.app/",
     githubUrl: "https://github.com/MertAliUzun/movie_collection"
@@ -94,6 +98,7 @@ export const projects = {
       "Contact Section"
     ],
     icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
+    iconColors: ['rgb(169, 169, 169)', 'rgb(0, 184, 69)', 'rgb(97, 218, 251)', 'rgb(255, 221, 51)', 'rgb(38, 87, 255)', 'rgb(239, 41, 41)'],
     technologies: ["NextJS", "MongoDB", "React", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://www.nakliyatvatan.com.tr/",
     githubUrl: "https://github.com/MertAliUzun/movingcompweb"
