@@ -64,7 +64,7 @@ export default function Home() {
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-      <main className="main">
+      <main className="main" id="main">
         <TopBar />
         <div className="hero">  
         <div class="profile">

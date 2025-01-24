@@ -34,44 +34,40 @@ const TopNavbar = () => {
     <div className="top-navbar">
       <nav>
         <ul>
-          <li
+        <li
             className={activeSection === "main" ? "active" : ""}
             onMouseEnter={() => setActiveSection("main")}
             onMouseLeave={() => setActiveSection(null)}
+            onClick={() => window.location.href = "#main"}
           >
-            <Link href="#main">
-              <FaHome size={25}/>
-            </Link>
+            <FaHome size={25}/>
             {activeSection === "main" && <span className="tooltip">Main</span>}
           </li>
           <li
             className={activeSection === "projects" ? "active" : ""}
             onMouseEnter={() => setActiveSection("projects")}
             onMouseLeave={() => setActiveSection(null)}
+            onClick={() => window.location.href = "#projects"}
           >
-            <Link href="#projects">
-              <FaProjectDiagram size={25}/>
-            </Link>
+            <FaProjectDiagram size={25}/>
             {activeSection === "projects" && <span className="tooltip">Projects</span>}
           </li>
           <li
             className={activeSection === "skills" ? "active" : ""}
             onMouseEnter={() => setActiveSection("skills")}
             onMouseLeave={() => setActiveSection(null)}
+            onClick={() => window.location.href = "#skills"}
           >
-            <Link href="#skills">
-              <FaCode size={25}/>
-            </Link>
+            <FaCode size={25}/>
             {activeSection === "skills" && <span className="tooltip">Skills</span>}
           </li>
           <li
             className={activeSection === "experience" ? "active" : ""}
             onMouseEnter={() => setActiveSection("experience")}
             onMouseLeave={() => setActiveSection(null)}
+            onClick={() => window.location.href = "#experience"}
           >
-            <Link href="#experience">
-              <FaClipboardList size={25}/>
-            </Link>
+            <FaClipboardList size={25}/>
             {activeSection === "experience" && <span className="tooltip">Experience</span>}
           </li>
         </ul>

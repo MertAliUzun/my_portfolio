@@ -1036,6 +1036,14 @@ nav ul li:hover {
   border-radius: 15px;
 }
 
+nav ul li svg{
+  color: #7c4dff;
+}
+
+nav ul li:hover svg{
+  color: white;
+}
+
 nav ul li.active {
   color: white;
 }
