@@ -238,15 +238,7 @@ export default function Home() {
                     animationData={animationData}
                     style={{ width: "100%", height: "100%", objectFit: "contain" }}
                   />
-                ) : (
-                  <Image
-                    src={selectedProject.image}
-                    alt={selectedProject.title[language]}
-                    width={800}
-                    height={400}
-                    objectFit="cover"
-                  />
-                )}
+                ) : null}
               </div>
               <div className="projectLinks">
                 <a
