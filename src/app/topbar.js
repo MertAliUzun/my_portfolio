@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { FaHome, FaProjectDiagram, FaClipboardList, FaCode } from "react-icons/fa";
 import Link from "next/link";
 
-const TopNavbar = () => {
+const TopNavbar = ({ language }) => {
   const [activeSection, setActiveSection] = useState(null);
   const sectionsRef = {
     main: useRef(null),
@@ -34,14 +34,14 @@ const TopNavbar = () => {
     <div className="top-navbar">
       <nav>
         <ul>
-        <li
+          <li
             className={activeSection === "main" ? "active" : ""}
             onMouseEnter={() => setActiveSection("main")}
             onMouseLeave={() => setActiveSection(null)}
             onClick={() => window.location.href = "#main"}
           >
             <FaHome size={25}/>
-            {activeSection === "main" && <span className="tooltip">Main</span>}
+            {activeSection === "main" && <span className="tooltip">{language === 'en' ? "Main" : "Ana Sayfa"}</span>}
           </li>
           <li
             className={activeSection === "projects" ? "active" : ""}
@@ -50,7 +50,7 @@ const TopNavbar = () => {
             onClick={() => window.location.href = "#projects"}
           >
             <FaProjectDiagram size={25}/>
-            {activeSection === "projects" && <span className="tooltip">Projects</span>}
+            {activeSection === "projects" && <span className="tooltip">{language === 'en' ? "Projects" : "Projeler"}</span>}
           </li>
           <li
             className={activeSection === "skills" ? "active" : ""}
@@ -59,7 +59,7 @@ const TopNavbar = () => {
             onClick={() => window.location.href = "#skills"}
           >
             <FaCode size={25}/>
-            {activeSection === "skills" && <span className="tooltip">Skills</span>}
+            {activeSection === "skills" && <span className="tooltip">{language === 'en' ? "Skills" : "Yetenekler"}</span>}
           </li>
           <li
             className={activeSection === "experience" ? "active" : ""}
@@ -68,7 +68,7 @@ const TopNavbar = () => {
             onClick={() => window.location.href = "#experience"}
           >
             <FaClipboardList size={25}/>
-            {activeSection === "experience" && <span className="tooltip">Experience</span>}
+            {activeSection === "experience" && <span className="tooltip">{language === 'en' ? "Experience" : "Deneyim"}</span>}
           </li>
         </ul>
       </nav>

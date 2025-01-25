@@ -3,17 +3,41 @@ import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, 
 
 export const projects = {
   gokturk: {
-    title: "GökTürk App",
-    description: "An App to Learn and Translate Göktürk. Also has Dictionary, Proverbs and Inscriptions",
+    title: {
+      en: "GökTürk App",
+      tr: "GökTürk Uygulaması"
+    },
+    description: {
+      en: "An App to Learn and Translate Göktürk. Also has Dictionary, Proverbs and Inscriptions",
+      tr: "Göktürk'ü Öğrenmek ve Çeviri Yapmak için Bir Uygulama. Ayrıca Sözlük, Atasözleri ve Yazıtlar içerir."
+    },
     image: "/gokturk_app.png",
     animationPath: "/gokturk_app.json",
     features: [
-      "Translate From Latin Turkish to Gokturk",
-      "Alphabet of Gokturk",
-      "Rules of Gokturk Alphabet",
-      "Gokturk Dictionary That can be Searched With Both Latin and Gokturk letters",
-      "Gokturk Proverbs",
-      "Gokturk Alphabet-Latin Alphabet and Modern Turkish Translation of Orkhon Inscriptions",
+      {
+        en: "Translate From Latin Turkish to Gokturk",
+        tr: "Latin Türkçesinden Göktürkçeye Çeviri"
+      },
+      {
+        en: "Alphabet of Gokturk",
+        tr: "Göktürk Alfabesi"
+      },
+      {
+        en: "Rules of Gokturk Alphabet",
+        tr: "Göktürk Alfabesi Kuralları"
+      },
+      {
+        en: "Gokturk Dictionary That can be Searched With Both Latin and Gokturk letters",
+        tr: "Hem Latin Hem de Göktürk Harfleri ile Aranabilen Göktürk Sözlüğü"
+      },
+      {
+        en: "Gokturk Proverbs",
+        tr: "Göktürk Atasözleri"
+      },
+      {
+        en: "Gokturk Alphabet-Latin Alphabet and Modern Turkish Translation of Orkhon Inscriptions",
+        tr: "Göktürk Alfabesi-Latin Alfabesi ve Orkhon Yazıtlarının Modern Türkçeye Çevirisi"
+      },
     ],
     icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
@@ -22,18 +46,45 @@ export const projects = {
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
   taskManager: {
-    title: "Weather App",
-    description: "An App that shows Weather Related Data for Chosen Location",
+    title: {
+      en: "Weather App",
+      tr: "Hava Durumu Uygulaması"
+    },
+    description: {
+      en: "An App that shows Weather Related Data for Chosen Location",
+      tr: "Seçilen Konum için Hava Durumu ile İlgili Verileri Gösteren Bir Uygulama"
+    },
     image: "/weather_app.png",
     animationPath: "/weather_app.json",
     features: [
-      "Uses OpenWeatherMap API for Data",
-      "Asks for Location Permission",
-      "Shows Data for Your Location",
-      "Can Choose Another Location for Weather",
-      "Can Search Location",
-      "Weather is Shown for Current, Every 3 Hours, and Everyday for Next 5 Days",
-      "Can Show; Weather, Wind Speed, Humidity and Temperature"
+      {
+        en: "Uses OpenWeatherMap API for Data",
+        tr: "Veri için OpenWeatherMap API'sini Kullanır"
+      },
+      {
+        en: "Asks for Location Permission",
+        tr: "Konum İzni İster"
+      },
+      {
+        en: "Shows Data for Your Location",
+        tr: "Kendi Konumunuz için Verileri Gösterir"
+      },
+      {
+        en: "Can Choose Another Location for Weather",
+        tr: "Hava Durumu için Başka Bir Konum Seçebilir"
+      },
+      {
+        en: "Can Search Location",
+        tr: "Konum Arayabilir"
+      },
+      {
+        en: "Weather is Shown for Current, Every 3 Hours, and Everyday for Next 5 Days",
+        tr: "Hava Durumu Mevcut, Her 3 Saate Bir ve Önümüzdeki 5 Gün için Gösterilir"
+      },
+      {
+        en: "Can Show; Weather, Wind Speed, Humidity and Temperature",
+        tr: "Hava, Rüzgar Hızı, Nem ve Sıcaklık Gösterir"
+      }
     ],
     icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
@@ -42,18 +93,45 @@ export const projects = {
     githubUrl: "https://github.com/MertAliUzun/weather_app"
   },
   hms: {
-    title: "Hospital Management System",
-    description: "This App can be Used by Doctors and Secretaries to Manage Hospital Business",
+    title: {
+      en: "Hospital Management System",
+      tr: "Hastane Yönetim Sistemi"
+    },
+    description: {
+      en: "This App can be Used by Doctors and Secretaries to Manage Hospital Business",
+      tr: "Bu Uygulama Doktorlar ve Sekreterler Tarafından Hastane İşlerini Yönetmek için Kullanılabilir"
+    },
     image: "/hms.png",
     animationPath: "/hms.json",
     features: [
-      "Multi-Layered Design Architecture",
-      "Database Models for Appointments, Secretaries, Doctors, Patients",
-      "Login System that Detects if You are an Secretary or a Doctor",
-      "Doctors can Record their Chat with Patients",
-      "They can See Health Documents and Handle Prescriptions",
-      "Secretaries can CRUD all Models",
-      "Secretaries Create Appointments if the Doctor's Experties and Patients Problem Match",
+      {
+        en: "Multi-Layered Design Architecture",
+        tr: "Çok Katmanlı Tasarım Mimarisi"
+      },
+      {
+        en: "Database Models for Appointments, Secretaries, Doctors, Patients",
+        tr: "Randevular, Sekreterler, Doktorlar ve Hastalar için Veritabanı Modelleri"
+      },
+      {
+        en: "Login System that Detects if You are an Secretary or a Doctor",
+        tr: "Sekreter veya Doktor Olduğunuzu Tespit Eden Giriş Sistemi"
+      },
+      {
+        en: "Doctors can Record their Chat with Patients",
+        tr: "Doktorlar Hastalarla Yaptıkları Görüşmeleri Kaydedebilir"
+      },
+      {
+        en: "They can See Health Documents and Handle Prescriptions",
+        tr: "Sağlık Belgelerini Görebilir ve Reçeteleri Yönetebilirler"
+      },
+      {
+        en: "Secretaries can CRUD all Models",
+        tr: "Sekreterler Tüm Modelleri CRUD İşlemleri Yapabilir"
+      },
+      {
+        en: "Secretaries Create Appointments if the Doctor's Experties and Patients Problem Match",
+        tr: "Sekreterler, Doktorun Uzmanlığı ve Hastanın Problemi Eşleşirse Randevu Oluşturabilir"
+      },
     ],
     icons: [SiSharp, SiDotnet, FaDatabase],
     iconColors: ['rgb(138, 43, 226)', 'rgb(101, 101, 255)', 'rgb(38, 87, 255)'],
@@ -62,19 +140,49 @@ export const projects = {
     githubUrl: "https://github.com/MertAliUzun/HMS"
   },
   movie_web: {
-    title: "Movie Collection Web App",
-    description: "Users Can Add and Manage Their Movies in Their Collections and Wishlists",
+    title: {
+      en: "Movie Collection Web App",
+      tr: "Film Koleksiyonu Web Uygulaması"
+    },
+    description: {
+      en: "Users Can Add and Manage Their Movies in Their Collections and Wishlists",
+      tr: "Kullanıcılar Filmlerini Koleksiyonlarına ve İstek Listelerine Ekleyebilir ve Yönetebilir"
+    },
     image: "/movie_web.png",
     animationPath: "/movie_web.json",
     features: [
-      "This Project uses TMDB API",
-      "Movies can be Searched",
-      "Login and Register System",
-      "You can Add a Movie to Collection or Wishlist",
-      "Every Movie is Added to Logged in User",
-      "Movies can be Edited and Deleted",
-      "Movies can be Rated",
-      "Sorting System",
+      {
+        en: "This Project uses TMDB API",
+        tr: "Bu Proje TMDB API'sini Kullanıyor"
+      },
+      {
+        en: "Movies can be Searched",
+        tr: "Filmler Aranabilir"
+      },
+      {
+        en: "Login and Register System",
+        tr: "Giriş ve Kayıt Sistemi"
+      },
+      {
+        en: "You can Add a Movie to Collection or Wishlist",
+        tr: "Bir Filmi Koleksiyona veya İstek Listesine Ekleyebilirsiniz"
+      },
+      {
+        en: "Every Movie is Added to Logged in User",
+        tr: "Her Film Giriş Yapmış Kullanıcıya Eklenir"
+      },
+      {
+        en: "Movies can be Edited and Deleted",
+        tr: "Filmler Düzenlenebilir ve Silinebilir"
+      },
+      {
+        en: "Movies can be Rated",
+        tr: "Filmler Puanlanabilir"
+      },
+      {
+        en: "Sorting System",
+        tr: "Sıralama Sistemi"
+      },
     ],
     icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
     iconColors: ['rgb(169, 169, 169)', 'rgb(0, 184, 69)', 'rgb(97, 218, 251)', 'rgb(255, 221, 51)', 'rgb(38, 87, 255)', 'rgb(239, 41, 41)'],
@@ -83,19 +191,49 @@ export const projects = {
     githubUrl: "https://github.com/MertAliUzun/movie_collection"
   },
   moving_company: {
-    title: "Moving Company Website",
-    description: "This Website Advertises Company and Helps Customers Track Their Cargo",
+    title: {
+      en: "Moving Company Website",
+      tr: "Taşımacılık Şirketi Web Sitesi"
+    },
+    description: {
+      en: "This Website Advertises Company and Helps Customers Track Their Cargo",
+      tr: "Bu Web Sitesi Şirketi Tanıtır ve Müşterilerin Kargolarını Takip Etmelerine Yardımcı Olur"
+    },
     image: "/moving_company.png",
     animationPath: "/moving_company.json",
     features: [
-      "Cargos are Recorded",
-      "Customers can Track Cargos with Track No",
-      "Location, Time and State of Cargos can be Tracked",
-      "Customer Comments",
-      "Services are Explained",
-      "Where Company Provides Services is Shown",
-      "FAQ Section",
-      "Contact Section"
+      {
+        en: "Cargos are Recorded",
+        tr: "Kargolar Kaydedilir"
+      },
+      {
+        en: "Customers can Track Cargos with Track No",
+        tr: "Müşteriler Takip Numarası ile Kargoları Takip Edebilir"
+      },
+      {
+        en: "Location, Time and State of Cargos can be Tracked",
+        tr: "Kargoların Konumu, Zamanı ve Durumu Takip Edilebilir"
+      },
+      {
+        en: "Customer Comments",
+        tr: "Müşteri Yorumları"
+      },
+      {
+        en: "Services are Explained",
+        tr: "Hizmetler Açıklanır"
+      },
+      {
+        en: "Where Company Provides Services is Shown",
+        tr: "Şirketin Hizmet Verdiği Yerler Gösterilir"
+      },
+      {
+        en: "FAQ Section",
+        tr: "SSS Bölümü"
+      },
+      {
+        en: "Contact Section",
+        tr: "İletişim Bölümü"
+      },
     ],
     icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
     iconColors: ['rgb(169, 169, 169)', 'rgb(0, 184, 69)', 'rgb(97, 218, 251)', 'rgb(255, 221, 51)', 'rgb(38, 87, 255)', 'rgb(239, 41, 41)'],

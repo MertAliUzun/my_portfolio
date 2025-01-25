@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaCode , FaGlobe, FaMapMarkerAlt, FaHtml5, FaExternalLinkAlt, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaCode, FaGlobe, FaMapMarkerAlt, FaHtml5, FaExternalLinkAlt, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
 import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiReact } from 'react-icons/si';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -21,6 +21,8 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [animationData, setAnimationData] = useState(null);
   const [activeTab, setActiveTab] = useState('work');
+  const [language, setLanguage] = useState('en'); // Default language
+
   useEffect(() => {
     let interval;
     if (hovering && hoverAllowed) {
@@ -59,13 +61,23 @@ export default function Home() {
     }
   }, [selectedProject]);
 
+  const toggleLanguage = () => {
+    setLanguage(prev => (prev === 'en' ? 'tr' : 'en'));
+  };
+
   return (
     <div className="page">
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
+      <div className="language-toggle" onClick={toggleLanguage}>
+        <div className={`lang-slider ${language}`}>
+          <Image src="/us_flag.jpg" alt="English" width={30} height={20} className={`flag ${language === 'tr' ? 'hidden' : ''}`} />
+          <Image src="/tr_flag.jpg" alt="Turkish" width={30} height={20} className={`flag ${language === 'en' ? 'hidden' : ''}`} />
+        </div>
+      </div>
       <main className="main" id="main">
-        <TopBar />
+        <TopBar language={language} />
         <div className="hero">  
         <div class="profile">
           <div class="profile-inner">
@@ -79,7 +91,7 @@ export default function Home() {
                   />
             </div>
             <div class="profile-back">
-            <Image
+        <Image
                     src="/avatar2.jpg"
                     alt="Avatar Front"
                     width={200}
@@ -129,10 +141,10 @@ export default function Home() {
             
           </div>*/}
           <div className="text-container">
-           <h3 style={{ fontSize: 16, color: "grey" }}>Hello I'm</h3>
+           <h3 style={{ fontSize: 16, color: "grey" }}>{language === 'en' ? "Hello I'm" : "Merhaba Ben"}</h3>
            <h1 className="title">Mert Ali Uzun</h1>
-           <h1 style={{ color: '#956afa', fontSize: 28 }}> <span style={{ color: 'grey' }}>a</span> Full-Stack Developer</h1>
-           <h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />Trabzon/Turkiye</h2>
+           <h1 style={{ color: '#956afa', fontSize: 28 }}> <span style={{ color: 'grey' }}>{language === 'en' ? "a" : "bir"}</span> Full-Stack Developer</h1>
+           {/*<h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />{language === 'en' ? "Trabzon/Turkey" : "Trabzon/Türkiye"}</h2>*/}
 
             <div className="contactIcons">
             <a href="tel:+905315652141" aria-label="Phone" className="contactButton contactButton1">
@@ -153,40 +165,40 @@ export default function Home() {
           </div>
           <div className="downloadCV">
           <a href="mert_ali_uzun_cv.pdf" download className="cvButton cvButton-outline">
-              <h2 style={{ fontSize: 16 }}> Download CV  <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
-            </a>
-            </div>
+              <h2 style={{ fontSize: 16 }}>{language === 'en' ? "Download CV" : "CV İndir"} <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
+          </a>
+        </div>
          </div>
          </div>      
          <div class="aboutCard">
          <div class="loader">
-           <p>I Develop</p>
+           <p>{language === 'en' ? "I Develop" : "Geliştirdiklerim:"}</p>
            <div class="words">
-             <span class="word">Mobile Applications</span>
-             <span class="word">Web Applications</span>
-             <span class="word">Hypercasual Games</span>
+             <span class="word">{language === 'en' ? "Mobile Applications" : "Mobil Uygulamalar"}</span>
+             <span class="word">{language === 'en' ? "Web Applications" : "Web Uygulamaları"}</span>
+             <span class="word">{language === 'en' ? "Hypercasual Games" : "Mobil Oyunlar"}</span>
            </div>
          </div>
        </div> 
  
         <section className="projects" id="projects" style={{marginTop: 100}}>
-          <h2 className="sectionTitle spaceFont">Projects</h2>
+          <h2 className="sectionTitle spaceFont">{language === 'en' ? "Projects" : "Projeler"}</h2>
           <div className="grid">
             {Object.entries(projects).map(([key, project]) => (
               <div className="card" key={key}>
                 <div className="cardContent">
                   <div className="cardImage">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={150}
-                        height={255}
-                        objectFit="cover"
-                      />
+                    <Image
+                      src={project.image}
+                      alt={project.title[language]}
+                      width={150}
+                      height={255}
+                      objectFit="cover"
+                    />
                   </div>
                   <div className="cardInfo">
-                    <h3 className="cardTitle spaceFont">{project.title}</h3>
-                    <p className="hideMobile cardDescription">{project.description}</p>
+                    <h3 className="cardTitle spaceFont">{project.title[language]}</h3>
+                    <p className="hideMobile cardDescription">{project.description[language]}</p>
                     <div className="skillCard hideMobile">
                     <ul>
                       {project.icons.slice(0, 3).map((Icon, index) => (
@@ -201,7 +213,7 @@ export default function Home() {
                     onClick={() => setSelectedProject(project)} 
                     className="viewProjectBtn"
                   >
-                   View Project <FaExternalLinkAlt style={{marginLeft: 5}} />  
+                    {language === 'en' ? "View Project" : "Projeyi Gör"} <FaExternalLinkAlt style={{ marginLeft: 5 }} />  
                   </button>
                 </div>
               </div>
@@ -219,7 +231,7 @@ export default function Home() {
               >
                 ×
               </button>
-              <h1 className="projectTitle">{selectedProject.title}</h1>
+              <h1 className="projectTitle">{selectedProject.title[language]}</h1>
               <div className="projectHero">
                 {animationData ? (
                   <Lottie
@@ -229,7 +241,7 @@ export default function Home() {
                 ) : (
                   <Image
                     src={selectedProject.image}
-                    alt={selectedProject.title}
+                    alt={selectedProject.title[language]}
                     width={800}
                     height={400}
                     objectFit="cover"
@@ -249,31 +261,30 @@ export default function Home() {
                     }
                   }}
                 >
-                <FaGlobe /> Try it Out
+                  <FaGlobe /> {language === 'en' ? "Try it Out" : "Deneyin"}
                 </a>
-                  <a 
-                    href={selectedProject.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="projectBtn"
-                  >
-                   <FaCode /> Source Code
-                  </a>
-                </div>
+                <a
+                  href={selectedProject.githubUrl} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="projectBtn"
+                >
+                  <FaCode /> {language === 'en' ? "Source Code" : "Kaynak Kodu"}
+                </a>
+              </div>
               <div className="projectContent">
-                
-                <p className="projectDescription">{selectedProject.description}</p>
+                <p className="projectDescription">{selectedProject.description[language]}</p>
 
                 <div className="projectFeatures">
-                  <h2>Features</h2>
+                  <h2>{language === 'en' ? "Features" : "Özellikler"}</h2>
                   <ul>
                     {selectedProject.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
+                      <li key={index}>{feature[language]}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="projectTechnologies">
-                  <h2>Technologies Used</h2>
+                  <h2>{language === 'en' ? "Technologies Used" : "Kullanılan Teknolojiler"}</h2>
                   <div className="skillCard">
                     <ul>
                       {selectedProject.icons.map((Icon, index) => (
@@ -290,12 +301,12 @@ export default function Home() {
         )}
 
         <section className="skills" id="skills">
-          <h2 className="sectionTitle spaceFont">Skills</h2>
+          <h2 className="sectionTitle spaceFont">{language === 'en' ? "Skills" : "Yetenekler"}</h2>
           <div className="skillGrid">
             <div className="skillCard">
               <h4 className="skillTitle">Frontend</h4>
               <ul>
-              <li data-description="Designing websites with React">
+                <li data-description="Designing websites with React">
                   <SiReact style={{ color: 'rgb(97, 218, 251)' }}/> React
                 </li>
                 <li data-description="Using C# for application and game development">
@@ -349,22 +360,21 @@ export default function Home() {
           </div>
         </section>  
 
-
         <section className="experience" id="experience" style={{marginTop: 100, marginBottom: 100}}>
-          <h2 className="sectionTitle spaceFont">Experience</h2>
+          <h2 className="sectionTitle spaceFont">{language === 'en' ? "Experience" : "Deneyim"}</h2>
           
           <div className="toggle-container">
             <button 
               className={`toggle-btn ${activeTab === 'work' ? 'active' : ''}`}
               onClick={() => setActiveTab('work')}
             >
-              Work
+              {language === 'en' ? "Work" : "İş"}
             </button>
             <button 
               className={`toggle-btn ${activeTab === 'education' ? 'active' : ''}`}
               onClick={() => setActiveTab('education')}
             >
-              Education
+              {language === 'en' ? "Education" : "Eğitim"}
             </button>
           </div>
 
@@ -372,38 +382,36 @@ export default function Home() {
             {activeTab === 'work' ? (
               <>
                 <div className="timeline-item">
-                  <div className="timeline-date">2024 April - 2024 June</div>
+                  <div className="timeline-date">{language === 'en' ? "2024 April - 2024 June" : "2024 Nisan - 2024 Haziran"}</div>
                   <div className="timeline-content">
-                    <h3>Intern Flutter</h3>
+                    <h3>{language === 'en' ? "Intern Flutter" : "Flutter Stajyeri"}</h3>
                     <h4>Phi Software</h4>
-                    <p>Learned about mobile development environment and used Flutter and Dart to build an app that also uses calls for API</p>
+                    <p>{language === 'en' ? "Learned about mobile development environment and used Flutter and Dart to build an app that also uses calls for API" : "Mobil geliştirme ortamını öğrendim ve API çağrıları yapan bir uygulama geliştirmek için Flutter ve Dart kullandım."}</p>
                   </div>
                 </div>
                 <div className="timeline-item">
-                  <div className="timeline-date">2022 June - 2022 August</div>
+                  <div className="timeline-date">{language === 'en' ? "2022 June - 2022 August" : "2022 Haziran - 2022 Ağustos"}</div>
                   <div className="timeline-content">
-                    <h3>Intern DevOps</h3>
-                    <h4>Trabzon Ortahisar Belediyesi</h4>
-                    <p>Learned about Git, DevOps and .NET project environment.</p>
+                    <h3>{language === 'en' ? "Intern DevOps" : "DevOps Stajyeri"}</h3>
+                    <h4>{language === 'en' ? "Trabzon Ortahisar Belediyesi" : "Trabzon Ortahisar Municipality"}</h4>
+                    <p>{language === 'en' ? "Learned about Git, DevOps and .NET project environment." : "Git, DevOps ve .NET proje ortamını öğrendim."}</p>
                   </div>
                 </div>
               </>
             ) : (
               <>
                 <div className="timeline-item">
-                  <div className="timeline-date">2018 Sept. - 2024 June</div>
+                  <div className="timeline-date">{language === 'en' ? "2018 Sept. - 2024 June" : "2018 Eylül - 2024 Haziran"}</div>
                   <div className="timeline-content">
-                    <h3>Computer Engineering</h3>
-                    <h4>Duzce University</h4>
-                    <p>Bachelor's Degree • GPA: 2.99</p>
+                    <h3>{language === 'en' ? "Computer Engineering" : "Bilgisayar Mühendisliği"}</h3>
+                    <h4>{language === 'en' ? "Duzce University" : "Düzce Üniversitesi"}</h4>
+                    <p>{language === 'en' ? "Bachelor's Degree • GPA: 2.99" : "Lisans Diploması • Not Ortalaması: 2.99"}</p>
                   </div>
                 </div>
               </>
             )}
           </div>
         </section>
-
-
       </main>
     </div>
   );
