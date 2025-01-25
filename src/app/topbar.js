@@ -38,7 +38,10 @@ const TopNavbar = ({ language }) => {
             className={activeSection === "main" ? "active" : ""}
             onMouseEnter={() => setActiveSection("main")}
             onMouseLeave={() => setActiveSection(null)}
-            onClick={() => window.location.href = "#main"}
+            onClick={() => {
+              const element = document.querySelector("#main");
+              element.scrollIntoView({ behavior: "smooth" });
+          }}
           >
             <FaHome size={25}/>
             {activeSection === "main" && <span className="tooltip">{language === 'en' ? "Main" : "Ana Sayfa"}</span>}
@@ -47,7 +50,10 @@ const TopNavbar = ({ language }) => {
             className={activeSection === "projects" ? "active" : ""}
             onMouseEnter={() => setActiveSection("projects")}
             onMouseLeave={() => setActiveSection(null)}
-            onClick={() => window.location.href = "#projects"}
+            onClick={() => {
+              const element = document.querySelector("#projects");
+              element.scrollIntoView({ behavior: "smooth" });
+          }}
           >
             <FaProjectDiagram size={25}/>
             {activeSection === "projects" && <span className="tooltip">{language === 'en' ? "Projects" : "Projeler"}</span>}
@@ -56,7 +62,10 @@ const TopNavbar = ({ language }) => {
             className={activeSection === "skills" ? "active" : ""}
             onMouseEnter={() => setActiveSection("skills")}
             onMouseLeave={() => setActiveSection(null)}
-            onClick={() => window.location.href = "#skills"}
+            onClick={() => {
+              const element = document.querySelector("#skills");
+              element.scrollIntoView({ behavior: "smooth" });
+          }}
           >
             <FaCode size={25}/>
             {activeSection === "skills" && <span className="tooltip">{language === 'en' ? "Skills" : "Yetenekler"}</span>}
@@ -65,7 +74,10 @@ const TopNavbar = ({ language }) => {
             className={activeSection === "experience" ? "active" : ""}
             onMouseEnter={() => setActiveSection("experience")}
             onMouseLeave={() => setActiveSection(null)}
-            onClick={() => window.location.href = "#experience"}
+            onClick={() => {
+              const element = document.querySelector("#experience");
+              element.scrollIntoView({ behavior: "smooth" });
+          }}
           >
             <FaClipboardList size={25}/>
             {activeSection === "experience" && <span className="tooltip">{language === 'en' ? "Experience" : "Deneyim"}</span>}
