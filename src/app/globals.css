@@ -670,6 +670,7 @@ a {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
+  font-size: 80%;
 }
 
 .projectFeatures li {
@@ -703,6 +704,7 @@ a {
   border-radius: 8px;
   transition: all 0.2s;
   font-weight: 500;
+  text-align: center;
 }
 
 .projectBtn:hover {
@@ -1096,8 +1098,71 @@ footer p {
   margin: 0;
 }
 
+.language-toggle {
+  position: fixed; /* Sayfanın sabit bir yerinde olacak */
+  top: 20px; /* Üstten 20px boşluk */
+  left: 40px; /* Sağdan 20px boşluk */
+  z-index: 1000;
+  margin: 1rem 0;
+  background-color: #141c2a;
+  border-radius: 50px;
+  padding: 10px;
+  transition: background 0.3s ease;
+  width: 75px;
+}
+
+.lang-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+.lang-btn img {
+  width: 60px; /* Bayrak boyutu */
+  height: 60px; /* Bayrak boyutu */
+}
+
+.lang-btn.active {
+  transform: scale(1.1);
+}
+
+.flag {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+}
+
+.flag.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.flag:not(.hidden) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lang-btn.active .flag {
+  transform: scale(1.1); /* Seçilen bayrağın biraz büyümesini sağlarız */
+}
+.lang-slider.en {
+  justify-content: flex-start; /* İngilizce seçildiğinde sola kaydır */
+}
+
+.lang-slider.tr {
+  justify-content: flex-end; /* Türkçe seçildiğinde sağa kaydır */
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+  .top-navbar {
+    display: none;
+  }
   .profile:hover .profile-inner {
     transform: rotateY(0deg); /* Hover işlemini iptal et */
   }
@@ -1238,63 +1303,4 @@ footer p {
   }
 }
 
-.language-toggle {
-  position: fixed; /* Sayfanın sabit bir yerinde olacak */
-  top: 20px; /* Üstten 20px boşluk */
-  left: 40px; /* Sağdan 20px boşluk */
-  z-index: 1000;
-  margin: 1rem 0;
-  background-color: #141c2a;
-  border-radius: 50px;
-  padding: 10px;
-  transition: background 0.3s ease;
-  width: 75px;
-}
-
-.lang-slider {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  margin: 0 0.5rem;
-  position: relative;
-}
-
-.lang-btn img {
-  width: 60px; /* Bayrak boyutu */
-  height: 60px; /* Bayrak boyutu */
-}
-
-.lang-btn.active {
-  transform: scale(1.1);
-}
-
-.flag {
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease;
-}
-
-.flag.hidden {
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-.flag:not(.hidden) {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.lang-btn.active .flag {
-  transform: scale(1.1); /* Seçilen bayrağın biraz büyümesini sağlarız */
-}
-.lang-slider.en {
-  justify-content: flex-start; /* İngilizce seçildiğinde sola kaydır */
-}
-
-.lang-slider.tr {
-  justify-content: flex-end; /* Türkçe seçildiğinde sağa kaydır */
-}
 

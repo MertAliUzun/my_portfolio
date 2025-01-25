@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaCode, FaGlobe, FaMapMarkerAlt, FaHtml5, FaExternalLinkAlt, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiReact } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiTailwindcss, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiReact } from 'react-icons/si';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { projects } from './data/projects';
@@ -280,7 +280,7 @@ export default function Home() {
                   <div className="skillCard">
                     <ul>
                       {selectedProject.icons.map((Icon, index) => (
-                        <li key={index} data-description={`Kullanılan teknoloji: ${selectedProject.technologies[index]}`}>
+                        <li key={index} data-description={`${language === 'en' ? "Technology Used" : "Kullanılan Teknoloji"}: ${selectedProject.technologies[index]}`}>
                           <Icon style={{ color: selectedProject.iconColors[index] }} /> {selectedProject.technologies[index]}
                         </li>
                       ))}
@@ -298,15 +298,18 @@ export default function Home() {
             <div className="skillCard">
               <h4 className="skillTitle">Frontend</h4>
               <ul>
-                <li data-description="Designing websites with React">
-                  <SiReact style={{ color: 'rgb(97, 218, 251)' }}/> React
+                <li data-description="Programming with Dart for Flutter applications">
+                  <SiDart style={{ color: 'rgb(0, 188, 212)' }}/> Dart
                 </li>
                 <li data-description="Using C# for application and game development">
                   <SiSharp style={{ color: 'rgb(138, 43, 226)' }} /> C#
                 </li>
-                <li data-description="Programming with Dart for Flutter applications">
-                  <SiDart style={{ color: 'rgb(0, 188, 212)' }}/> Dart
+                <li data-description="Designing websites with React">
+                  <SiReact style={{ color: 'rgb(97, 218, 251)' }}/> React
                 </li>
+                <li data-description="Managing design of the website with Tailwind">
+                  <SiTailwindcss style={{ color: 'rgb(59, 130, 246)' }}/> Tailwind
+                </li>                
                 <li data-description="Creating interactive web content with JavaScript">
                   <FaJs style={{ color: 'rgb(255, 221, 51)' }}/> JavaScript
                 </li>
@@ -324,8 +327,8 @@ export default function Home() {
                 <li data-description="Managing data with the NoSQL database MongoDB">
                   <SiMongodb style={{ color: 'rgb(0, 184, 69)' }}/> MongoDB
                 </li>
-                <li data-description="Working with relational databases using MySQL">
-                  <FaDatabase style={{ color: 'rgb(38, 87, 255)' }}/> MsSQL
+                <li data-description="Managing data with Microsoft SQL Server database">
+                  <FaDatabase style={{ color: 'rgb(38, 87, 255)' }}/> Ms SQL
                 </li>
                 <li data-description="Backend-as-a-Service platform for scalable apps">
                   <SiSupabase style={{ color: 'rgb(34, 197, 94)' }}/> Supabase
@@ -385,7 +388,7 @@ export default function Home() {
                   <div className="timeline-date">{language === 'en' ? "2022 June - 2022 August" : "2022 Haziran - 2022 Ağustos"}</div>
                   <div className="timeline-content">
                     <h3>{language === 'en' ? "Intern DevOps" : "DevOps Stajyeri"}</h3>
-                    <h4>{language === 'en' ? "Trabzon Ortahisar Belediyesi" : "Trabzon Ortahisar Municipality"}</h4>
+                    <h4>{language === 'en' ? "Trabzon Ortahisar Municipality" : "Trabzon Ortahisar Belediyesi"}</h4>
                     <p>{language === 'en' ? "Learned about Git, DevOps and .NET project environment." : "Git, DevOps ve .NET proje ortamını öğrendim."}</p>
                   </div>
                 </div>

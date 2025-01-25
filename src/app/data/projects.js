@@ -1,5 +1,5 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiMysql, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiTailwindcss, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
 
 export const projects = {
   gokturk: {
@@ -235,9 +235,9 @@ export const projects = {
         tr: "İletişim Bölümü"
       },
     ],
-    icons: [SiNextdotjs, SiMongodb, SiReact, SiJavascript, SiHtml5, SiCss3],
-    iconColors: ['rgb(169, 169, 169)', 'rgb(0, 184, 69)', 'rgb(97, 218, 251)', 'rgb(255, 221, 51)', 'rgb(38, 87, 255)', 'rgb(239, 41, 41)'],
-    technologies: ["NextJS", "MongoDB", "React", "JavaScript", "HTML", "CSS"],
+    icons: [SiNextdotjs, SiMongodb, SiReact, SiTailwindcss, SiJavascript, SiHtml5, SiCss3],
+    iconColors: ['rgb(169, 169, 169)', 'rgb(0, 184, 69)', 'rgb(97, 218, 251)', 'rgb(59, 130, 246)', 'rgb(255, 221, 51)', 'rgb(38, 87, 255)', 'rgb(239, 41, 41)'],
+    technologies: ["NextJS", "MongoDB", "React", "Tailwind", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://www.nakliyatvatan.com.tr/",
     githubUrl: "https://github.com/MertAliUzun/movingcompweb"
   }
