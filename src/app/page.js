@@ -147,25 +147,25 @@ export default function Home() {
            {/*<h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />{language === 'en' ? "Trabzon/Turkey" : "Trabzon/Türkiye"}</h2>*/}
 
             <div className="contactIcons">
-            <a href="tel:+905315652141" aria-label="Phone" className="contactButton contactButton1">
+            <a href="tel:+905315652141" aria-label="Phone" className="contactButton contactButton1" target="_blank">
               <FaPhone />
             </a>
-            <a href="https://github.com/MertAliUzun" aria-label="GitHub" className="contactButton contactButton2">
+            <a href="https://github.com/MertAliUzun" aria-label="GitHub" className="contactButton contactButton2" target="_blank">
               <FaGithub />
             </a>
             <a href="mailto:a_mert_uzun@hotmail.com" aria-label="Email" className="contactButton contactButton3">
               <FaEnvelope />
             </a>
-            <a href="https://www.linkedin.com/in/mert-ali-uzun/" aria-label="LinkedIn" className="contactButton contactButton4">
+            <a href="https://www.linkedin.com/in/mert-ali-uzun/" aria-label="LinkedIn" className="contactButton contactButton4" target="_blank">
               <FaLinkedin />
             </a>
-            <a href="https://wa.me/905315652141" aria-label="WhatsApp" className="contactButton contactButton5">
+            <a href="https://wa.me/905315652141" aria-label="WhatsApp" className="contactButton contactButton5" target="_blank">
               <FaWhatsapp />
             </a>
           </div>
           <div className="downloadCV">
           <a href="mert_ali_uzun_cv.pdf" download className="cvButton cvButton-outline">
-              <h2 style={{ fontSize: 16 }}>{language === 'en' ? "Download CV" : "CV İndir"} <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
+              <h2>{language === 'en' ? "Download CV" : "CV İndir"} <FaDownload style={{ marginLeft: 8, color: "white"}} /></h2>
           </a>
         </div>
          </div>
