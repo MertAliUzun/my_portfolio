@@ -489,12 +489,14 @@ a {
   border-radius: 0.375rem;
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.5rem .5rem;
+  padding: .75rem .75rem;
   transition: all 0.2s;
 }
 
 .contactButton:hover {
-  transform: scale(1.1); /* Hover sırasında büyüt */
+  transform: scale(1.1); 
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
 }
 .contactButton1:hover {
   color: rgb(0, 163, 85);
@@ -516,6 +518,10 @@ a {
   color: var(--foreground);
   font-size: 2rem;
   transition: color 0.2s;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease; 
 }
 .cvButton {
   background: transparent; /* Arka planı şeffaf yap */
@@ -1258,19 +1264,19 @@ footer p {
   }
 
   .text-container {
-    text-align: center; /* Center text on smaller screens */
+    text-align: center;
   }
   .text-container h3 {
     margin-top: 5rem;
   }
 
   .contactIcons {
-    flex-direction: row; /* Stack contact icons vertically */
-    align-items: center; /* Center align icons */
+    flex-direction: row;
+    align-items: center;
   }
 
   .contactButton {
-    margin: 0.5rem 0; /* Add margin between buttons */
+    margin: 0.5rem 0;
   }
   .timeline::before {
     left: 0;
