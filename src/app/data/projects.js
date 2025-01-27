@@ -13,6 +13,7 @@ export const projects = {
     },
     image: "/gokturk_app.png",
     animationPath: "/gokturk_app.json",
+    platform: "--- Mobile Applications ---",
     features: [
       {
         en: "Translate From Latin Turkish to Gokturk",
@@ -45,7 +46,7 @@ export const projects = {
     demoUrl: "none",
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
-  taskManager: {
+  weatherApp: {
     title: {
       en: "Weather App",
       tr: "Hava Durumu Uygulaması"
@@ -56,6 +57,7 @@ export const projects = {
     },
     image: "/weather_app.png",
     animationPath: "/weather_app.json",
+    platform: "--- Mobile Applications ---",
     features: [
       {
         en: "Uses OpenWeatherMap API for Data",
@@ -92,53 +94,6 @@ export const projects = {
     demoUrl: "none",
     githubUrl: "https://github.com/MertAliUzun/weather_app"
   },
-  hms: {
-    title: {
-      en: "Hospital Management System",
-      tr: "Hastane Yönetim Sistemi"
-    },
-    description: {
-      en: "This App can be Used by Doctors and Secretaries to Manage Hospital Business",
-      tr: "Bu Uygulama Doktorlar ve Sekreterler Tarafından Hastane İşlerini Yönetmek için Kullanılabilir"
-    },
-    image: "/hms.png",
-    animationPath: "/hms.json",
-    features: [
-      {
-        en: "Multi-Layered Design Architecture",
-        tr: "Çok Katmanlı Tasarım Mimarisi"
-      },
-      {
-        en: "Database Models for Appointments, Secretaries, Doctors, Patients",
-        tr: "Randevular, Sekreterler, Doktorlar ve Hastalar için Veritabanı Modelleri"
-      },
-      {
-        en: "Login System that Detects if You are an Secretary or a Doctor",
-        tr: "Sekreter veya Doktor Olduğunuzu Tespit Eden Giriş Sistemi"
-      },
-      {
-        en: "Doctors can Record their Chat with Patients",
-        tr: "Doktorlar Hastalarla Yaptıkları Görüşmeleri Kaydedebilir"
-      },
-      {
-        en: "They can See Health Documents and Handle Prescriptions",
-        tr: "Sağlık Belgelerini Görebilir ve Reçeteleri Yönetebilirler"
-      },
-      {
-        en: "Secretaries can CRUD all Models",
-        tr: "Sekreterler Tüm Modelleri CRUD İşlemleri Yapabilir"
-      },
-      {
-        en: "Secretaries Create Appointments if the Doctor's Experties and Patients Problem Match",
-        tr: "Sekreterler, Doktorun Uzmanlığı ve Hastanın Problemi Eşleşirse Randevu Oluşturabilir"
-      },
-    ],
-    icons: [SiSharp, SiDotnet, FaDatabase],
-    iconColors: ['rgb(138, 43, 226)', 'rgb(101, 101, 255)', 'rgb(38, 87, 255)'],
-    technologies: ["C#", ".Net", "Ms SQL"],
-    demoUrl: "https://github.com/MertAliUzun/HMS/tree/main/Setup",
-    githubUrl: "https://github.com/MertAliUzun/HMS"
-  },
   movie_web: {
     title: {
       en: "Movie Collection Web App",
@@ -150,6 +105,7 @@ export const projects = {
     },
     image: "/movie_web.png",
     animationPath: "/movie_web.json",
+    platform: "--- Websites ---",
     features: [
       {
         en: "This Project uses TMDB API",
@@ -201,6 +157,7 @@ export const projects = {
     },
     image: "/moving_company.png",
     animationPath: "/moving_company.json",
+    platform: "--- Websites ---",
     features: [
       {
         en: "Cargos are Recorded",
@@ -240,5 +197,53 @@ export const projects = {
     technologies: ["NextJS", "MongoDB", "React", "Tailwind", "JavaScript", "HTML", "CSS"],
     demoUrl: "https://www.nakliyatvatan.com.tr/",
     githubUrl: "https://github.com/MertAliUzun/movingcompweb"
-  }
+  },
+  hms: {
+    title: {
+      en: "Hospital Management System",
+      tr: "Hastane Yönetim Sistemi"
+    },
+    description: {
+      en: "This App can be Used by Doctors and Secretaries to Manage Hospital Business",
+      tr: "Bu Uygulama Doktorlar ve Sekreterler Tarafından Hastane İşlerini Yönetmek için Kullanılabilir"
+    },
+    image: "/hms.png",
+    animationPath: "/hms.json",
+    platform: "--- Desktop Programs ---",
+    features: [
+      {
+        en: "Multi-Layered Design Architecture",
+        tr: "Çok Katmanlı Tasarım Mimarisi"
+      },
+      {
+        en: "Database Models for Appointments, Secretaries, Doctors, Patients",
+        tr: "Randevular, Sekreterler, Doktorlar ve Hastalar için Veritabanı Modelleri"
+      },
+      {
+        en: "Login System that Detects if You are an Secretary or a Doctor",
+        tr: "Sekreter veya Doktor Olduğunuzu Tespit Eden Giriş Sistemi"
+      },
+      {
+        en: "Doctors can Record their Chat with Patients",
+        tr: "Doktorlar Hastalarla Yaptıkları Görüşmeleri Kaydedebilir"
+      },
+      {
+        en: "They can See Health Documents and Handle Prescriptions",
+        tr: "Sağlık Belgelerini Görebilir ve Reçeteleri Yönetebilirler"
+      },
+      {
+        en: "Secretaries can CRUD all Models",
+        tr: "Sekreterler Tüm Modelleri CRUD İşlemleri Yapabilir"
+      },
+      {
+        en: "Secretaries Create Appointments if the Doctor's Experties and Patients Problem Match",
+        tr: "Sekreterler, Doktorun Uzmanlığı ve Hastanın Problemi Eşleşirse Randevu Oluşturabilir"
+      },
+    ],
+    icons: [SiSharp, SiDotnet, FaDatabase],
+    iconColors: ['rgb(138, 43, 226)', 'rgb(101, 101, 255)', 'rgb(38, 87, 255)'],
+    technologies: ["C#", ".Net", "Ms SQL"],
+    demoUrl: "https://github.com/MertAliUzun/HMS/tree/main/Setup",
+    githubUrl: "https://github.com/MertAliUzun/HMS"
+  },
 }; 

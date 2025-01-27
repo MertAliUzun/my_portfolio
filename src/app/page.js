@@ -65,6 +65,15 @@ export default function Home() {
     setLanguage(prev => (prev === 'en' ? 'tr' : 'en'));
   };
 
+  // Projeleri platformlarına göre gruplandır
+  const groupedProjects = Object.entries(projects).reduce((acc, [key, project]) => {
+    if (!acc[project.platform]) {
+      acc[project.platform] = [];
+    }
+    acc[project.platform].push({ key, ...project });
+    return acc;
+  }, {});
+
   return (
     <div className="page">
       <div id="stars"></div>
@@ -183,42 +192,47 @@ export default function Home() {
  
         <section className="projects" id="projects" style={{marginTop: 100}}>
           <h2 className="sectionTitle spaceFont">{language === 'en' ? "Projects" : "Projeler"}</h2>
-          <div className="grid">
-            {Object.entries(projects).map(([key, project]) => (
-              <div className="card" key={key}>
-                <div className="cardContent">
-                  <div className="cardImage">
-                    <Image
-                      src={project.image}
-                      alt={project.title[language]}
-                      width={150}
-                      height={255}
-                      objectFit="cover"
-                    />
+          {Object.entries(groupedProjects).map(([platform, projects]) => (
+            <div key={platform}>
+              <h3 className="platformTitle">{platform}</h3>
+              <div className="grid">
+                {projects.map(({ key, title, description, image, icons, iconColors, technologies }) => (
+                  <div className="card" key={key}>
+                    <div className="cardContent">
+                      <div className="cardImage">
+                        <Image
+                          src={image}
+                          alt={title[language]}
+                          width={150}
+                          height={255}
+                          objectFit="cover"
+                        />
+                      </div>
+                      <div className="cardInfo">
+                        <h3 className="cardTitle spaceFont">{title[language]}</h3>
+                        <p className="hideMobile cardDescription">{description[language]}</p>
+                        <div className="skillCard hideMobile">
+                          <ul>
+                            {icons.slice(0, 3).map((Icon, index) => (
+                              <li key={index} data-description={`Kullanılan teknoloji: ${technologies[index]}`}>
+                                <Icon style={{ color: iconColors[index] }} /> {technologies[index]}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                      <button 
+                        onClick={() => setSelectedProject(projects.find(p => p.key === key))} 
+                        className="viewProjectBtn"
+                      >
+                        {language === 'en' ? "View Project" : "Projeyi Gör"} <FaExternalLinkAlt style={{ marginLeft: 5 }} />  
+                      </button>
+                    </div>
                   </div>
-                  <div className="cardInfo">
-                    <h3 className="cardTitle spaceFont">{project.title[language]}</h3>
-                    <p className="hideMobile cardDescription">{project.description[language]}</p>
-                    <div className="skillCard hideMobile">
-                    <ul>
-                      {project.icons.slice(0, 3).map((Icon, index) => (
-                        <li key={index} data-description={`Kullanılan teknoloji: ${project.technologies[index]}`}>
-                          <Icon style={{ color: project.iconColors[index] }}/> {project.technologies[index]}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  </div>
-                  <button 
-                    onClick={() => setSelectedProject(project)} 
-                    className="viewProjectBtn"
-                  >
-                    {language === 'en' ? "View Project" : "Projeyi Gör"} <FaExternalLinkAlt style={{ marginLeft: 5 }} />  
-                  </button>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </section>
 
         {/* Modal */}

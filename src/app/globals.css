@@ -439,6 +439,17 @@ a {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+.platformTitle {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
 
 .image-container {
   position: relative;
@@ -1010,7 +1021,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   height: 75px; 
   width: 300px;
   border-radius: 40px;
@@ -1180,6 +1191,9 @@ footer p {
   }
   .sectionTitle {
     text-align: center;
+  }
+  .platformTitle {
+    font-size: 1.4rem;
   }
   .aboutCard {
     margin-top: 6rem;
