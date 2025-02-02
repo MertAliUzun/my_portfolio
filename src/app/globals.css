@@ -421,7 +421,7 @@ a {
 }
 
 .sectionTitle {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -1191,6 +1191,7 @@ footer p {
   }
   .sectionTitle {
     text-align: center;
+    font-size: 2rem;
   }
   .platformTitle {
     font-size: 1.4rem;

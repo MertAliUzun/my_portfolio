@@ -67,10 +67,11 @@ export default function Home() {
 
   // Projeleri platformlarına göre gruplandır
   const groupedProjects = Object.entries(projects).reduce((acc, [key, project]) => {
-    if (!acc[project.platform]) {
-      acc[project.platform] = [];
+    const platform = project.platform[language]; // Dil durumuna göre platformu al
+    if (!acc[platform]) {
+      acc[platform] = [];
     }
-    acc[project.platform].push({ key, ...project });
+    acc[platform].push({ key, ...project });
     return acc;
   }, {});
 

@@ -13,7 +13,10 @@ export const projects = {
     },
     image: "/gokturk_app.png",
     animationPath: "/gokturk_app.json",
-    platform: "--- Mobile Applications ---",
+    platform: {
+      en: "Mobile Applications",
+      tr: "Mobil Uygulamalar"
+    },
     features: [
       {
         en: "Translate From Latin Turkish to Gokturk",
@@ -57,7 +60,10 @@ export const projects = {
     },
     image: "/weather_app.png",
     animationPath: "/weather_app.json",
-    platform: "--- Mobile Applications ---",
+    platform: {
+      en: "Mobile Applications",
+      tr: "Mobil Uygulamalar"
+    },
     features: [
       {
         en: "Uses OpenWeatherMap API for Data",
@@ -105,7 +111,10 @@ export const projects = {
     },
     image: "/movie_web.png",
     animationPath: "/movie_web.json",
-    platform: "--- Websites ---",
+    platform: {
+      en: "Web Applications",
+      tr: "Web Uygulamaları"
+    },
     features: [
       {
         en: "This Project uses TMDB API",
@@ -157,7 +166,10 @@ export const projects = {
     },
     image: "/moving_company.png",
     animationPath: "/moving_company.json",
-    platform: "--- Websites ---",
+    platform: {
+      en: "Web Applications",
+      tr: "Web Uygulamaları"
+    },
     features: [
       {
         en: "Cargos are Recorded",
@@ -209,7 +221,10 @@ export const projects = {
     },
     image: "/hms.png",
     animationPath: "/hms.json",
-    platform: "--- Desktop Programs ---",
+    platform: {
+      en: "Desktop Applications",
+      tr: "Masaüstü Uygulamaları"
+    },
     features: [
       {
         en: "Multi-Layered Design Architecture",
