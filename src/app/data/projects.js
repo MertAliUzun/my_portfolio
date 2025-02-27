@@ -1,7 +1,78 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiTailwindcss, SiFlutter, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiTailwindcss, SiFlutter, SiApachehive ,SiThemoviedatabase , SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
 
 export const projects = {
+  zenMovieCollection: {
+    title: {
+      en: "Zen: Movie Collection",
+      tr: "Zen: Movie Collection"
+    },
+    description: {
+      en: "An app for managing your movie collections and watch lists.",
+      tr: "Film koleksiyon ve izleme listelerinizi yönetmek için kullanılan bir uygulama"
+    },
+    image: "/zen_movie_app.png",
+    animationPath: "/zen_movie_app.json",
+    platform: {
+      en: "Mobile Applications",
+      tr: "Mobil Uygulamalar"
+    },
+    features: [
+      {
+        en: "Users can add movies to collection and watch list and manage those movies.",
+        tr: "Kullanıcılar filmleri koleksiyonlarına ve izleme listelerine ekleyebilir ve bu filmleri yönetebilirler."
+      },
+      {
+        en: "Local-first storage system with Flutter Hive",
+        tr: "Flutter Hive ile yerel öncelikli depolama sistemi"
+      },
+      {
+        en: "User system with Google Sign-In",
+        tr: "Google Girişi ile kullanıcı sistemi"
+      },
+      {
+        en: "Movies can be exported to and imported from CSV files",
+        tr: "Filmler CSV dosyalarına aktarılabilir ve CSV dosyalarından içeri aktarılabilir"
+      }, 
+      {
+        en: "Users can search for movies with TMDB API",
+        tr: "Kullanıcılar TMDB API'si ile filmleri arayabilirler"
+      },
+      {
+        en: "Different views, sorting and group by options for movies",
+        tr: "Filmler için farklı görünüm, sıralama ve gruplayarak görüntüleme seçenekleri"
+      },
+      {
+        en: "Guide for where to watch the movie (Stream, Buy, Rent)",
+        tr: "Filmi nerede izleyebileceğinize dair rehber (Yayınla, Satın Al, Kirala)"
+      },
+      {
+        en: "Similar movie recommendation system",
+        tr: "Benzer film öneri sistemi"
+      },
+      {
+        en: "Daily, weekly and monthly popular movies for selected genre",
+        tr: "Seçilen tür için günlük, haftalık ve aylık popüler filmler"
+      },
+      {
+        en: "Director, actor, writer and company screens that shows related movies",
+        tr: "Yönetmen, oyuncu, senarist ve şirket ekranları, ilgili filmleri gösterir"
+      },
+      {
+        en: "Production Company screen",
+        tr: "Yapım Şirketi ekranı"
+      },
+      {
+        en: "Multi-language system that detects and adapts to your device language",
+        tr: "Cihazınızın dilini algılayan ve buna uyum sağlayan çok dilli sistem"
+      }
+    ],
+    icons: [SiFlutter, SiDart, SiSupabase, SiThemoviedatabase],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(60, 208, 139)', 'rgb(67, 186, 191)'],
+    technologies: ["Flutter", "Dart", "Supabase", "TMDB API"],
+    demoUrl: "none",
+    githubUrl: "https://github.com/MertAliUzun/movie_collections_mobile"
+  },
   gokturk: {
     title: {
       en: "GökTürk App",
