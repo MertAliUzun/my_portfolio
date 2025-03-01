@@ -65,6 +65,10 @@ export const projects = {
       {
         en: "Multi-language system that detects and adapts to your device language",
         tr: "Cihazınızın dilini algılayan ve buna uyum sağlayan çok dilli sistem"
+      },
+      {
+        en: "https://www.zenmoviecollection.com/",
+        tr: "https://www.zenmoviecollection.com/"
       }
     ],
     icons: [SiFlutter, SiDart, SiSupabase, SiThemoviedatabase],

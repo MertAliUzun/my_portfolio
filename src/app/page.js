@@ -283,13 +283,29 @@ export default function Home() {
                 <p className="projectDescription">{selectedProject.description[language]}</p>
 
                 <div className="projectFeatures">
-                  <h2>{language === 'en' ? "Features" : "Özellikler"}</h2>
-                  <ul>
-                    {selectedProject.features.map((feature, index) => (
-                      <li key={index}>{feature[language]}</li>
-                    ))}
-                  </ul>
-                </div>
+                <h2>{language === 'en' ? "Features" : "Özellikler"}</h2>
+                <ul>
+                  {selectedProject.features.map((feature, index) => {
+                    const featureText = feature[language];
+                    // Check if the feature contains a URL (simple check for 'http' or 'https')
+                    const isLink = featureText.startsWith("http://") || featureText.startsWith("https://");
+                  
+                    return (
+                      <li key={index}>
+                        {isLink ? (
+                          // If it's a link, make it a clickable anchor tag
+                          <a href={featureText} target="_blank" rel="noopener noreferrer" className="featureLink">
+                            {featureText}
+                          </a>
+                        ) : (
+                          // Otherwise, display it as plain text
+                          featureText
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
                 <div className="projectTechnologies">
                   <h2>{language === 'en' ? "Technologies Used" : "Kullanılan Teknolojiler"}</h2>
                   <div className="skillCard">

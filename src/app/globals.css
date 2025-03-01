@@ -429,6 +429,13 @@ a {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+.featureLink {
+  color:var(--foreground);
+  text-decoration: none;
+}
+.featureLink:hover {
+  color:#6935f8;
+}
 
 .skillTitle {
   background: -webkit-linear-gradient(white, #38495a);
