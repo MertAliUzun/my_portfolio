@@ -43,6 +43,14 @@ export const projects = {
         tr: "Filmler için farklı görünüm, sıralama ve gruplayarak görüntüleme seçenekleri"
       },
       {
+        en: "Get movie recommendations from AI with all kinds of parameters you wish",
+        tr: "Yapay zeka'dan istediğin her parametreye göre film tavsiyesi al"
+      },
+      {
+        en: "Discover movies with latest, upcoming and ğopular sections",
+        tr: "son çıkanlar, yakında çıkacaklar ve popülerler kısmından film keşfet"
+      },
+      {
         en: "Guide for where to watch the movie (Stream, Buy, Rent)",
         tr: "Filmi nerede izleyebileceğinize dair rehber (Yayınla, Satın Al, Kirala)"
       },
@@ -74,7 +82,7 @@ export const projects = {
     icons: [SiFlutter, SiDart, SiSupabase, SiThemoviedatabase],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(60, 208, 139)', 'rgb(67, 186, 191)'],
     technologies: ["Flutter", "Dart", "Supabase", "TMDB API"],
-    demoUrl: "none",
+    demoUrl: "https://play.google.com/store/apps/details?id=com.mau.zenmoviecollection",
     githubUrl: "https://github.com/MertAliUzun/movie_collections_mobile"
   },
   gokturk: {
