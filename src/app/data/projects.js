@@ -47,7 +47,7 @@ export const projects = {
         tr: "Yapay zeka'dan istediğin her parametreye göre film tavsiyesi al"
       },
       {
-        en: "Discover movies with latest, upcoming and ğopular sections",
+        en: "Discover movies with latest, upcoming and popular sections",
         tr: "son çıkanlar, yakında çıkacaklar ve popülerler kısmından film keşfet"
       },
       {
