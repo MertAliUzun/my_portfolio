@@ -87,8 +87,8 @@ export const projects = {
   },
   gokturk: {
     title: {
-      en: "GökTürk App",
-      tr: "GökTürk Uygulaması"
+      en: "GökTürk: Translate and Learn",
+      tr: "GökTürk: Çeviri ve Öğrenme"
     },
     description: {
       en: "An App to Learn and Translate Göktürk. Also has Dictionary, Proverbs and Inscriptions",
@@ -200,8 +200,8 @@ export const projects = {
     },
     features: [
       {
-        en: "This Project uses TMDB API",
-        tr: "Bu Proje TMDB API'sini Kullanıyor"
+        en: "This Project uses OMDB API",
+        tr: "Bu Proje OMDB API'sini Kullanıyor"
       },
       {
         en: "Movies can be Searched",
