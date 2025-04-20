@@ -153,7 +153,7 @@ export default function Home() {
           <div className="text-container">
            <h3 style={{ fontSize: 16, color: "grey" }}>{language === 'en' ? "Hello I'm" : "Merhaba Ben"}</h3>
            <h1 className="title">Mert Ali Uzun</h1>
-           <h1 style={{ color: '#956afa', fontSize: 28 }}> <span style={{ color: 'grey' }}>{language === 'en' ? "a" : "bir"}</span> Full-Stack Developer</h1>
+           <h1 style={{ color: '#956afa', fontSize: 28 }}> <span style={{ color: 'grey' }}>{language === 'en' ? "a" : "bir"}</span> {language === 'en' ? ' Full-Stack Developer' : ' Full-Stack Geliştirici'}</h1>
            {/*<h2 style={{ fontSize: 20, marginTop: 10, color: "grey"}}> <FaMapMarkerAlt style={{ marginRight: 8 }} />{language === 'en' ? "Trabzon/Turkey" : "Trabzon/Türkiye"}</h2>*/}
 
             <div className="contactIcons">
