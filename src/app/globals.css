@@ -574,6 +574,7 @@ a {
   color: white;
 }
 .text-container {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -835,6 +836,7 @@ a {
 }
 /* From Uiverse.io by vamsidevendrakumar */
 .profile {
+  padding-bottom: 4rem;
   width: 300px;
   height: 200px;
   perspective: 1000px;
@@ -1229,6 +1231,8 @@ footer p {
   }
 
   .profile {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     width: 100%; /* Make profile take full width */
     height: auto; /* Adjust height */
   }
