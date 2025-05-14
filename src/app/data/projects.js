@@ -82,7 +82,7 @@ export const projects = {
     icons: [SiFlutter, SiDart, SiSupabase, SiThemoviedatabase],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(60, 208, 139)', 'rgb(67, 186, 191)'],
     technologies: ["Flutter", "Dart", "Supabase", "TMDB API"],
-    demoUrl: "https://play.google.com/store/apps/details?id=com.mau.zenmoviecollection",
+    demoUrl: "https://drive.google.com/file/d/1OfJYGid8Rnz8rBxXwLeJI4zVjM4M5pD5/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/movie_collections_mobile"
   },
   gokturk: {
@@ -129,7 +129,7 @@ export const projects = {
     icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
-    demoUrl: "none",
+    demoUrl: "https://drive.google.com/file/d/1AKtj5O6m7vDrev0TdUoy2pgIQ7hXBd4R/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
   weatherApp: {
@@ -180,7 +180,7 @@ export const projects = {
     icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
-    demoUrl: "none",
+    demoUrl: "https://drive.google.com/file/d/1udYOr1zk8q7LDWJiDbvwYqUc88Ip2O9y/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/weather_app"
   },
   movie_web: {
