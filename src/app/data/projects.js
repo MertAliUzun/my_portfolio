@@ -126,9 +126,9 @@ export const projects = {
         tr: "Göktürk Alfabesi-Latin Alfabesi ve Orkhon Yazıtlarının Modern Türkçeye Çevirisi"
       },
     ],
-    icons: [SiFlutter, SiDart, SiOpenai],
+    icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
-    technologies: ["Flutter", "Dart", "OpenAI"],
+    technologies: ["Flutter", "Dart"],
     demoUrl: "https://drive.google.com/file/d/1AKtj5O6m7vDrev0TdUoy2pgIQ7hXBd4R/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/todo_app"
   },
@@ -153,9 +153,9 @@ export const projects = {
         tr: "test"
       },
     ],
-    icons: [SiFlutter, SiDart],
+    icons: [SiFlutter, SiDart, SiOpenai],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
-    technologies: ["Flutter", "Dart"],
+    technologies: ["Flutter", "Dart", "OpenAI"],
     demoUrl: "https://drive.google.com/file/d/1udYOr1zk8q7LDWJiDbvwYqUc88Ip2O9y/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
