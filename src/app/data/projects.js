@@ -1,5 +1,5 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaWhatsapp, FaDownload, FaMapMarkerAlt, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaSupabase } from 'react-icons/fa';
-import { SiSharp, SiDart, SiMongodb, SiTailwindcss, SiFlutter, SiApachehive ,SiThemoviedatabase , SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
+import { SiSharp, SiDart, SiMongodb, SiTailwindcss, SiFlutter, SiApachehive ,SiThemoviedatabase , SiOpenai, SiNextdotjs, SiDotnet, SiUnity, SiSupabase, SiJavascript, SiHtml5, SiCss3, SiReact } from 'react-icons/si';
 
 export const projects = {
   zenMovieCollection: {
@@ -126,10 +126,37 @@ export const projects = {
         tr: "Göktürk Alfabesi-Latin Alfabesi ve Orkhon Yazıtlarının Modern Türkçeye Çevirisi"
       },
     ],
+    icons: [SiFlutter, SiDart, SiOpenai],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
+    technologies: ["Flutter", "Dart", "OpenAI"],
+    demoUrl: "https://drive.google.com/file/d/1AKtj5O6m7vDrev0TdUoy2pgIQ7hXBd4R/view?usp=sharing",
+    githubUrl: "https://github.com/MertAliUzun/todo_app"
+  },
+  todoAI: {
+    title: {
+      en: "Todo AI",
+      tr: "Todo AI"
+    },
+    description: {
+      en: "Todo ai",
+      tr: "Todo ai"
+    },
+    image: "/todo_app.png",
+    animationPath: "/todo_app.json",
+    platform: {
+      en: "Mobile Applications",
+      tr: "Mobil Uygulamalar"
+    },
+    features: [
+      {
+        en: "test",
+        tr: "test"
+      },
+    ],
     icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
-    demoUrl: "https://drive.google.com/file/d/1AKtj5O6m7vDrev0TdUoy2pgIQ7hXBd4R/view?usp=sharing",
+    demoUrl: "https://drive.google.com/file/d/1udYOr1zk8q7LDWJiDbvwYqUc88Ip2O9y/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
   weatherApp: {
