@@ -138,8 +138,8 @@ export const projects = {
       tr: "Todo AI"
     },
     description: {
-      en: "Todo ai",
-      tr: "Todo ai"
+      en: "An app that automatically creates a TODO list based on the user's command by analyzing it and creating sub-tasks.",
+      tr: "Kullanıcının verdiği komutu analiz ederek alt görevleriyle birlikte bir TODO otomatik oluşturan TODO uygulaması."
     },
     image: "/todo_app.png",
     animationPath: "/todo_app.json",
