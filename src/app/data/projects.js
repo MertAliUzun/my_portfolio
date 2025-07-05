@@ -82,7 +82,7 @@ export const projects = {
     icons: [SiFlutter, SiDart, SiOpenai, SiSupabase, SiThemoviedatabase],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(60, 208, 139)', 'rgb(67, 186, 191)', 'rgb(255, 221, 51)'],
     technologies: ["Flutter", "Dart", "OpenAI", "Supabase", "TMDB API"],
-    demoUrl: "https://drive.google.com/file/d/1OfJYGid8Rnz8rBxXwLeJI4zVjM4M5pD5/view?usp=sharing",
+    demoUrl: "https://play.google.com/store/apps/details?id=com.mau.zenmoviecollection",
     githubUrl: "https://github.com/MertAliUzun/movie_collections_mobile"
   },
   gokturk: {
