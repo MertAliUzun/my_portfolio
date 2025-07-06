@@ -129,7 +129,7 @@ export const projects = {
     icons: [SiFlutter, SiDart],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
-    demoUrl: "https://drive.google.com/file/d/1AKtj5O6m7vDrev0TdUoy2pgIQ7hXBd4R/view?usp=sharing",
+    demoUrl: "https://play.google.com/store/apps/details?id=com.mau.gokturk",
     githubUrl: "https://github.com/MertAliUzun/todo_app"
   },
   todoAI: {
