@@ -148,10 +148,31 @@ export const projects = {
       tr: "Mobil Uygulamalar"
     },
     features: [
+    
       {
-        en: "test",
-        tr: "test"
+        en: "Thanks to AI support, when you write what you want to do, the AI creates a custom to-do for it",
+        tr: "AI desteği sayesinde yapmak istediğinizi yazınca yapay zeka buna özel to-do oluşturur"
       },
+      {
+        en: "You can see how the AI creates the to-do, letter by letter",
+        tr: "Yapay zekanın nasıl to-do oluşturduğunu harf harf görebilirsiniz"
+      },
+      {
+        en: "You can edit the to-do created by the AI or create one manually without AI support",
+        tr: "Yapay zekanın oluşturduğu to-do yu değiştirebilir ya da yapay zeka desteksiz manuel olarak to-do oluşturabilirsiniz"
+      },
+      {
+        en: "You can drag your to-dos to assign which stage of completion they are in",
+        tr: "To-do larınızı sürükleyerek onların hangi yapılma aşamasında olduğunu atayabilirsiniz"
+      },
+      {
+        en: "You can assign priorities to your to-dos, sort, and filter them",
+        tr: "To-do larınıza öncelik atayabilir, sıralayabilir ve filtreleyebilirsiniz"
+      },
+      {
+        en: "You can choose from different themes in theme selection",
+        tr: "Tema seçiminden farklı tema seçebilirsiniz"
+      } 
     ],
     icons: [SiFlutter, SiDart, SiOpenai],
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
