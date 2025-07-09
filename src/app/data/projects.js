@@ -106,24 +106,24 @@ export const projects = {
         tr: "Latin Türkçesinden Göktürkçeye Çeviri"
       },
       {
-        en: "Alphabet of Gokturk",
-        tr: "Göktürk Alfabesi"
+        en: "AI supported Gokturk alphabet to modern Turkish translation",
+        tr: "AI destekli Göktürk alfabesinden günümüz Türkçesine çeviri"
       },
       {
-        en: "Rules of Gokturk Alphabet",
-        tr: "Göktürk Alfabesi Kuralları"
+        en: "Study rules and alphabet then test yourself in practice quiz",
+        tr: "Kurallar ve alfabeyi inceleyip pratik kısmından kendinizi geliştirin"
       },
       {
         en: "Gokturk Dictionary That can be Searched With Both Latin and Gokturk letters",
         tr: "Hem Latin Hem de Göktürk Harfleri ile Aranabilen Göktürk Sözlüğü"
       },
       {
-        en: "Gokturk Proverbs",
-        tr: "Göktürk Atasözleri"
+        en: "Discover Gokturk Proverbs",
+        tr: "Göktürk Atasözleri keşfedin"
       },
       {
-        en: "Gokturk Alphabet-Latin Alphabet and Modern Turkish Translation of Orkhon Inscriptions",
-        tr: "Göktürk Alfabesi-Latin Alfabesi ve Orkhon Yazıtlarının Modern Türkçeye Çevirisi"
+        en: "Examine the modern Turkish translation of Orkhon inscriptions",
+        tr: "Orhun yazıtlarının modern Türkçe çevirisini inceleyin"
       },
     ],
     icons: [SiFlutter, SiDart],
