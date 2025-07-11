@@ -178,7 +178,7 @@ export const projects = {
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart", "OpenAI"],
     demoUrl: "https://drive.google.com/file/d/1udYOr1zk8q7LDWJiDbvwYqUc88Ip2O9y/view?usp=sharing",
-    githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
+    githubUrl: "https://github.com/MertAliUzun/todo_app"
   },
   weatherApp: {
     title: {
