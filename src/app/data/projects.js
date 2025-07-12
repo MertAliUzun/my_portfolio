@@ -130,7 +130,7 @@ export const projects = {
     iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
     technologies: ["Flutter", "Dart"],
     demoUrl: "https://play.google.com/store/apps/details?id=com.mau.gokturk",
-    githubUrl: "https://github.com/MertAliUzun/todo_app"
+    githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
   todoAI: {
     title: {
