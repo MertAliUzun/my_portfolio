@@ -80,7 +80,7 @@ export const projects = {
       }
     ],
     icons: [SiFlutter, SiDart, SiOpenai, SiSupabase, SiThemoviedatabase],
-    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(60, 208, 139)', 'rgb(67, 186, 191)', 'rgb(255, 221, 51)'],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(16, 163, 127)', 'rgb(67, 186, 191)', 'rgb(255, 221, 51)'],
     technologies: ["Flutter", "Dart", "OpenAI", "Supabase", "TMDB API"],
     demoUrl: "https://play.google.com/store/apps/details?id=com.mau.zenmoviecollection",
     githubUrl: "https://github.com/MertAliUzun/movie_collections_mobile"
@@ -126,9 +126,9 @@ export const projects = {
         tr: "Orhun yazıtlarının modern Türkçe çevirisini inceleyin"
       },
     ],
-    icons: [SiFlutter, SiDart],
-    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
-    technologies: ["Flutter", "Dart"],
+    icons: [SiFlutter, SiDart, SiOpenai],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(16, 163, 127)'],
+    technologies: ["Flutter", "Dart", "OpenAI"],
     demoUrl: "https://play.google.com/store/apps/details?id=com.mau.gokturk",
     githubUrl: "https://github.com/MertAliUzun/gokturk_alphabet"
   },
@@ -175,7 +175,7 @@ export const projects = {
       } 
     ],
     icons: [SiFlutter, SiDart, SiOpenai],
-    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)'],
+    iconColors: ['rgb(66, 133, 244)', 'rgb(0, 188, 212)', 'rgb(16, 163, 127)'],
     technologies: ["Flutter", "Dart", "OpenAI"],
     demoUrl: "https://drive.google.com/file/d/1udYOr1zk8q7LDWJiDbvwYqUc88Ip2O9y/view?usp=sharing",
     githubUrl: "https://github.com/MertAliUzun/todo_app"
